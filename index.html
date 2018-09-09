@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="style.css"></head>
 <body>
   <div class="relative w-full">
-    <nav class="flex justify-between w-full absolute p-2">
+    <nav class="flex flex-col md:flex-row justify-between w-full absolute p-2">
       <div class="">
-        <img class="h-16" src="assets/logo.png" alt="Devcon Cebu"></div>
+        <img class="h-16" src="assets/logo.png" alt="Devcon Cebu">
+      </div>
 
-      <div class="mt-4 z-50">
+      <div class="mt-4 z-50 flex flex-wrap flex-col sm:flex-row">
         <a class="no-underline text-white text-xl px-4" href="#about">About</a>
         <a class="no-underline text-white text-xl px-4" href="#speakers">Speakers</a>
         <a class="no-underline text-white text-xl px-4" href="#schedule">Program Flow</a>
@@ -20,7 +21,7 @@
       </div>
     </nav>
     <div class="absolute h-screen w-full flex justify-center">
-      <svg class="w-2/5" version="1.1" id="devcon-summit" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 290.8 290.8" enable-background="new 0 0 290.8 290.8" xml:space="preserve">
+      <svg class="w-4/5 md:w-3/5 lg:w-2/5" version="1.1" id="devcon-summit" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 290.8 290.8" enable-background="new 0 0 290.8 290.8" xml:space="preserve">
         <g>
           <path fill="#FFFFFF" d="M147.7,250.6c29.3,0,58.6,0,87.9,0c1.6,0,1.6,0,1.6,1.6c0,9.5,0,19,0,28.4c0,1.1-0.3,1.3-1.3,1.3
             c-58.8,0-117.7,0-176.5,0c-1.1,0-1.3-0.3-1.3-1.3c0-9.6,0-19.1,0-28.7c0-1.1,0.3-1.4,1.4-1.4C88.9,250.6,118.3,250.6,147.7,250.6z
@@ -312,16 +313,13 @@
       </a>
     </div>
     <div class="py-32 -mt-10 bg-grey-lightest">
-      <div class="container mx-auto flex w-full">
-        <div class="pr-8">
-          <h1 class="text-5xl text-right">
-            Why join
-            <br>
-            DevCon Summit
-            <br>2018?</h1>
+      <div class="container mx-auto flex flex-col lg:flex-row w-full">
+        <div class="p-4 sm:pr-8">
+          <h1 class="text-2xl lg:text-4xl lg:text-right">
+            Why join <br class="hidden lg:block"> DevCon Summit <br class="hidden lg:block"> 2018?</h1>
         </div>
-        <div class="flex-1 pl-8">
-          <p class="text-2xl">
+        <div class="flex-1 p-4 lg:pl-8">
+          <p class="lg:text-2xl text-xl">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam natus praesentium, odio amet, esse officiis. A amet laboriosam repellendus ducimus non voluptatum alias quis sapiente, ex voluptatibus eum dolorem nulla, facilis possimus placeat adipisci ab vero enim qui at quos ea quod illo nesciunt. Commodi impedit laudantium voluptates ullam. Consequatur beatae illum iure aut assumenda corporis libero qui quas nulla, aspernatur iste inventore ratione, id, quae, quia! Magnam, perferendis?
           </p>
         </div>
