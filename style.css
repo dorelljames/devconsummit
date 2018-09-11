@@ -31,3 +31,7 @@
   position:relative;
   display:inline-block; /*required*/
 }
+
+.h-fit {
+  height: fit-content;
+}
