@@ -83,13 +83,24 @@ body{
 }
 </style>
 <body>
-  <div class="w3-bar w3-black" style="position: fixed; top: 0; z-index: 5;">
-    <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <a href="#about" class="w3-bar-item w3-button">About</a>
-    <a href="#venue" class="w3-bar-item w3-button">Venue</a>
-    <a href="#program" class="w3-bar-item w3-button">Program Flow</a>
-    <a href="#sponsor" class="w3-bar-item w3-button">Sponsors</a>
-    <a href="#register" class="w3-bar-item w3-button">Registration</a>
+  <div style="position: fixed; top: 0; z-index: 5; width: 100vw;">
+      <div class="w3-bar w3-black">
+          <a href="#home" class="w3-bar-item w3-hover-orange w3-button">
+            <div style="background: url('assets/template/cebu_white.png') no-repeat; background-position: 0px 5px; background-size: cover; width: 100px; height: 38px;"></div>
+          <a href="#about" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">About</a>
+          <a href="#venue" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Venue</a>
+          <a href="#program" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Program Flow</a>
+          <a href="#sponsor" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Sponsors</a>
+          <a href="#register" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Registration</a>
+          <a href="javascript:void(0)" class="w3-bar-item w3-padding-16 w3-button w3-right w3-hide-large w3-hide-medium" onclick="collapseMenu()">&#9776;</a>
+        </div>
+        <div id="mobileBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">About</a>
+            <a href="#venue" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">Venue</a>
+            <a href="#program" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">Program Flow</a>
+            <a href="#sponsor" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">Sponsors</a>
+            <a href="#register" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">Registration</a>
+        </div>
   </div>
   <div style="position: relative; height: 100vh;" class="gradBack" id="home">
     <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;" id="pheader"></div>
@@ -133,12 +144,15 @@ body{
         </td>
       </tr>
     </table>
-    <div style="position: absolute; bottom: 150px; z-index: 2; left: 0; text-align: center; width: 100%;">
+    <div class="w3-hide-small" style="position: absolute; bottom: 150px; z-index: 2; left: 0; text-align: center; width: 100%;">
         <a class="con-btn" href="#register" >Register Now</a>
+    </div>
+    <div class="w3-hide-large w3-hide-medium" style="position: absolute; bottom: 50px; z-index: 2; left: 0; text-align: center; width: 100%;">
+        <a class="con-btn" href="#register" style="width: 50vw;">Register Now</a>
     </div>
   </div>
   <div id="about" class="w3-header parallax" style="background-image: url('assets/template/dev_img.jpg'); padding-top: 100px; position: relative; color: #FFFFFF; font-family: 'Open Sans', san-serif; font-weight: 300; font-size: 25px;">
-    <div style="padding: 50px 100px;">
+    <div style="padding: 50px 100px;" class="w3-hide-small">
       <table style="width: 100%;">
         <tr>
           <td style="width: 40%; text-align: right; vertical-align: top;">
@@ -164,129 +178,51 @@ body{
         </tr>
       </table>
     </div>
+    <div style="padding: 10px 20px; text-align: center;" class="w3-hide-medium w3-hide-large">
+        <span style="font-family: 'trender', san-serif; font-size: 40px; color: #FFFFFF; background: #77216F; padding: 5px;">"What is DevCon Summit?"</span>
+        <br><br>
+        <ul style="font-size: 15px; text-align: left;">
+            <li>
+                The biggest annual developer conference in the Philippines, headed by the different Devcon chapters across the country<br><br>
+            </li>
+            <li>
+                Gathers aspiring and professional developers from all over the country in order for them to Sync, Support, and Succeed<br><br>
+            </li>
+            <li>
+                Showcases the latest trends and tricks of today’s technology<br><br>
+            </li>
+            <li>
+                Involvement of different tech groups to take part on this event and create a long lasting goals to the betterment of the community
+            </li>
+        </ul>
+      </div>
   </div>
   <div id="venue" style="position: relative;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.85721939614!2d123.90775791528719!3d10.353299569690735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a998eacee0c2c7%3A0x9b4bd9f5b718ad7d!2sMichael+Richartz+Building%2C+Nasipit%2C+Lungsod+ng+Cebu%2C+Lalawigan+ng+Cebu!5e0!3m2!1sen!2sph!4v1537443060366" style="border: none; width: 100%; height: 500px;"></iframe>
-      <div style="position: absolute; bottom: 0; right: 0; z-index: 1; background: #77216F; padding: 10px 50px 50px 10px;">
+      <div class="w3-hide-large w3-hide-medium w3-center" style="background: #77216F; padding: 10px">
+          <span style="font-family: 'trender', san-serif; font-size: 30px; color: #FFFFFF; background: #77216F; padding: 5px;">&ensp;<i class="fas fa-map-marked-alt"></i>&ensp;The Venue&ensp;</span>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.85721939614!2d123.90775791528719!3d10.353299569690735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a998eacee0c2c7%3A0x9b4bd9f5b718ad7d!2sMichael+Richartz+Building%2C+Nasipit%2C+Lungsod+ng+Cebu%2C+Lalawigan+ng+Cebu!5e0!3m2!1sen!2sph!4v1537443060366" style="margin-bottom: -5px; border: 0px; width: 100%; height: 500px;"></iframe>
+      <div class="w3-hide-small" style="position: absolute; bottom: 0; right: 0; z-index: 1; background: #77216F; padding: 10px 50px 50px 10px;">
           <span style="font-family: 'trender', san-serif; font-size: 50px; color: #FFFFFF; background: #77216F; padding: 5px;">&ensp;<i class="fas fa-map-marked-alt"></i>&ensp;The Venue&ensp;</span>
       </div>
   </div>
-  <div id="program" class="w3-header" style="position: relative; background: #77216F; font-family: 'Open Sans', sans-serif; font-weight: 300; padding: 200px 50px 50px 50px;">
-      <div style="position: absolute; top: 0; left: 0; background: #FFFFFF; padding: 50px 10px 10px 50px;">
-          <span style="font-family: 'trender', san-serif; font-size: 50px; color: #77216F; padding: 5px;"><i class="fas fa-clipboard-list"></i>&ensp;Program Flow</span>
+  <div id="program" class="w3-header" style="position: relative; background: #77216F; font-family: 'Open Sans', sans-serif; font-weight: 300;">
+      <div class="w3-hide-large w3-hide-medium w3-center" style="background: #FFFFFF; padding: 10px">
+          <span style="font-family: 'trender', san-serif; font-size: 30px; color: #77216F; background: #FFFFFF; padding: 5px;">&ensp;<i class="fas fa-clipboard-list"></i>
+            &ensp;Program Flow</span>
       </div>
-      <ul class="flex flex-col list-reset bg-grey-lightest border-b shadow hover:shadow-md">
-          <li class="flex p-4 border-b">
-            <div class="w-24 text-center">
-              <img class="w-10" src="assets/coffee-cup.svg" alt="">
-            </div>
-            <div class="flex-1 ml-4 text-lg">
-              <p class="text-grey-darkest tracking-wide">7:00AM - 8:00AM</p>
-              <p>Registration and Breakfast</p>
-            </div>
-          </li>
-          <li class="flex p-4 border-b">
-            <div class="w-24 text-center">
-              <img class="w-12" src="assets/opening-remarks.svg" alt="">
-            </div>
-            <div class="flex-1 ml-4 text-lg">
-              <p class="text-grey-darkest tracking-wide">8:00AM - 8:30AM</p>
-              <p>Opening Remarks</p>
-            </div>
-          </li>
-          <li class="flex p-4 border-b">
-            <div class="w-24 text-center">
-              <img class="w-12" src="assets/startup.svg" alt="">
-            </div>
-            <div class="flex-1 ml-4 text-lg">
-              <p class="text-grey-darkest tracking-wide">8:30AM - 9:30AM</p>
-              <p><span class="text-gradient leading-normal">Keynote 1:</span> <br> <span>Business Development for Startup Thinkers: Dev Edition</span></p>
-              <p><span class="text-grey-darker leading-normal">Open Panel 1:</span> <br> <span>Starting up in the Philippines, Entrepreneur Mentality Essentials</span></p>
-            </div>
-          </li>
-          <li class="flex p-4 border-b">
-            <div class="w-24 text-center">
-              <img class="w-12" src="assets/blockchain.svg" alt="">
-            </div>
-            <div class="flex-1 ml-4 text-lg">
-              <p class="text-grey-darkest tracking-wide">9:30AM - 10:30AM</p>
-              <p><span class="text-gradient leading-normal">Keynote 2:</span> <br> <span>The Future of Blockchain</span></p>
-              <p><span class="text-grey-darker leading-normal">Open Panel 2:</span> <br> <span>Security, IoT, BlockChain, DevOps</span></p>
-            </div>
-          </li>
-          <li class="flex p-4 border-b">
-            <div class="w-24 text-center">
-              <img class="w-12" src="assets/handshake.svg" alt="">
-            </div>
-            <div class="flex-1 ml-4 text-lg">
-              <p class="text-grey-darkest tracking-wide">10:30AM - 11:00AM</p>
-              <p>Co-partner Talk</p>
-            </div>
-          </li>
-          <li class="flex p-4 border-b">
-            <div class="w-24 text-center">
-              <img class="w-12" src="assets/web-design.svg" alt="">
-            </div>
-            <div class="flex-1 ml-4 text-lg">
-              <p class="text-grey-darkest tracking-wide">11:00AM - 12:00PM</p>
-              <p><span class="text-gradient leading-normal">Keynote 3:</span> <br> <span>Design Ethics and Principles for UI / UX</span></p>
-              <p><span class="text-grey-darker leading-normal">Open Panel 3:</span> <br> <span>Modern Design: UI/UX</span></p>
-            </div>
-          </li>
-          <li class="flex p-4 border-b">
-            <div class="w-24 text-center">
-              <img class="w-12" src="assets/lunch.svg" alt="">
-            </div>
-            <div class="flex-1 ml-4 text-lg">
-              <p class="text-grey-darkest tracking-wide">12:00PM - 1:00PM</p>
-              <p class="mt-2"><b class="tracking-wide">LUNCH</b></p>
-            </div>
-          </li>
-          <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/lightning.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wid">1:00PM - 3:00PM</p>
-                <p>
-                  <span class="text-grey-darker leading-normal">Lightning Talks:</span> <span>Startup</span>
-                </p>
-                <p>
-                  <span class="text-grey-darker leading-normal">Breakout sessions:</span>
-                  <ul>
-                    <li class="my-2">Blockchain and Security</li>
-                    <li class="mb-2">UI/UX</li>
-                    <li class="mb-2">Artificial Intelligence <span class="hidden sm:inline">(AI)</span></li>
-                    <li class="mb-2">Internet of Things <span class="hidden sm:inline">(IoT)</span></li>
-                  </ul>
-                </p>
-              </div>
-            </li>
+    <div class="w3-hide-small" style="position: absolute; top: 0; left: 0; background: #FFFFFF; padding: 50px 10px 10px 50px;">
+          <span style="font-family: 'trender', san-serif; font-size: 50px; color: #77216F; padding: 5px;"><i class="fas fa-clipboard-list"></i>&ensp;Program Flow</span>
+    </div>
+    <div class="w3-hide-small" style="padding: 200px 50px 50px 50px;">
+        <ul class="flex flex-col list-reset bg-grey-lightest border-b shadow hover:shadow-md">
             <li class="flex p-4 border-b">
               <div class="w-24 text-center">
-                <img class="w-12" src="assets/popcorn.svg" alt="">
+                <img class="w-10" src="assets/coffee-cup.svg" alt="">
               </div>
               <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">3:00PM - 3:15PM</p>
-                <p class="mt-2">Snacks and Energizer</p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/community.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">3:15PM - 4:15PM</p>
-                <p class="mt-2">Community Documentary & Open Panel</p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/trophy.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">4:15PM - 4:30PM</p>
-                <p class="mt-2">Awarding and Raffle</p>
+                <p class="text-grey-darkest tracking-wide">7:00AM - 8:00AM</p>
+                <p>Registration and Breakfast</p>
               </div>
             </li>
             <li class="flex p-4 border-b">
@@ -294,26 +230,276 @@ body{
                 <img class="w-12" src="assets/opening-remarks.svg" alt="">
               </div>
               <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">4:30 - 5:00PM</p>
-                <p class="mt-2">Closing Remarks</p>
+                <p class="text-grey-darkest tracking-wide">8:00AM - 8:30AM</p>
+                <p>Opening Remarks</p>
               </div>
             </li>
-        </ul>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/startup.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">8:30AM - 9:30AM</p>
+                <p><span class="text-gradient leading-normal">Keynote 1:</span> <br> <span>Business Development for Startup Thinkers: Dev Edition</span></p>
+                <p><span class="text-grey-darker leading-normal">Open Panel 1:</span> <br> <span>Starting up in the Philippines, Entrepreneur Mentality Essentials</span></p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/blockchain.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">9:30AM - 10:30AM</p>
+                <p><span class="text-gradient leading-normal">Keynote 2:</span> <br> <span>The Future of Blockchain</span></p>
+                <p><span class="text-grey-darker leading-normal">Open Panel 2:</span> <br> <span>Security, IoT, BlockChain, DevOps</span></p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/handshake.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">10:30AM - 11:00AM</p>
+                <p>Co-partner Talk</p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/web-design.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">11:00AM - 12:00PM</p>
+                <p><span class="text-gradient leading-normal">Keynote 3:</span> <br> <span>Design Ethics and Principles for UI / UX</span></p>
+                <p><span class="text-grey-darker leading-normal">Open Panel 3:</span> <br> <span>Modern Design: UI/UX</span></p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/lunch.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">12:00PM - 1:00PM</p>
+                <p class="mt-2"><b class="tracking-wide">LUNCH</b></p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/lightning.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wid">1:00PM - 3:00PM</p>
+                  <p>
+                    <span class="text-grey-darker leading-normal">Lightning Talks:</span> <span>Startup</span>
+                  </p>
+                  <p>
+                    <span class="text-grey-darker leading-normal">Breakout sessions:</span>
+                    <ul>
+                      <li class="my-2">Blockchain and Security</li>
+                      <li class="mb-2">UI/UX</li>
+                      <li class="mb-2">Artificial Intelligence <span class="hidden sm:inline">(AI)</span></li>
+                      <li class="mb-2">Internet of Things <span class="hidden sm:inline">(IoT)</span></li>
+                    </ul>
+                  </p>
+                </div>
+              </li>
+              <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/popcorn.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wide">3:00PM - 3:15PM</p>
+                  <p class="mt-2">Snacks and Energizer</p>
+                </div>
+              </li>
+              <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/community.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wide">3:15PM - 4:15PM</p>
+                  <p class="mt-2">Community Documentary & Open Panel</p>
+                </div>
+              </li>
+              <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/trophy.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wide">4:15PM - 4:30PM</p>
+                  <p class="mt-2">Awarding and Raffle</p>
+                </div>
+              </li>
+              <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/opening-remarks.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wide">4:30 - 5:00PM</p>
+                  <p class="mt-2">Closing Remarks</p>
+                </div>
+              </li>
+          </ul>
+    </div>
+    <div class="w3-hide-large w3-hide-medium" style="padding: 10px;">
+        <ul class="flex flex-col list-reset bg-grey-lightest border-b shadow hover:shadow-md">
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-10" src="assets/coffee-cup.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">7:00AM - 8:00AM</p>
+                <p>Registration and Breakfast</p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/opening-remarks.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">8:00AM - 8:30AM</p>
+                <p>Opening Remarks</p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/startup.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">8:30AM - 9:30AM</p>
+                <p><span class="text-gradient leading-normal">Keynote 1:</span> <br> <span>Business Development for Startup Thinkers: Dev Edition</span></p>
+                <p><span class="text-grey-darker leading-normal">Open Panel 1:</span> <br> <span>Starting up in the Philippines, Entrepreneur Mentality Essentials</span></p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/blockchain.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">9:30AM - 10:30AM</p>
+                <p><span class="text-gradient leading-normal">Keynote 2:</span> <br> <span>The Future of Blockchain</span></p>
+                <p><span class="text-grey-darker leading-normal">Open Panel 2:</span> <br> <span>Security, IoT, BlockChain, DevOps</span></p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/handshake.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">10:30AM - 11:00AM</p>
+                <p>Co-partner Talk</p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/web-design.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">11:00AM - 12:00PM</p>
+                <p><span class="text-gradient leading-normal">Keynote 3:</span> <br> <span>Design Ethics and Principles for UI / UX</span></p>
+                <p><span class="text-grey-darker leading-normal">Open Panel 3:</span> <br> <span>Modern Design: UI/UX</span></p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+              <div class="w-24 text-center">
+                <img class="w-12" src="assets/lunch.svg" alt="">
+              </div>
+              <div class="flex-1 ml-4 text-lg">
+                <p class="text-grey-darkest tracking-wide">12:00PM - 1:00PM</p>
+                <p class="mt-2"><b class="tracking-wide">LUNCH</b></p>
+              </div>
+            </li>
+            <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/lightning.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wid">1:00PM - 3:00PM</p>
+                  <p>
+                    <span class="text-grey-darker leading-normal">Lightning Talks:</span> <span>Startup</span>
+                  </p>
+                  <p>
+                    <span class="text-grey-darker leading-normal">Breakout sessions:</span>
+                    <ul>
+                      <li class="my-2">Blockchain and Security</li>
+                      <li class="mb-2">UI/UX</li>
+                      <li class="mb-2">Artificial Intelligence <span class="hidden sm:inline">(AI)</span></li>
+                      <li class="mb-2">Internet of Things <span class="hidden sm:inline">(IoT)</span></li>
+                    </ul>
+                  </p>
+                </div>
+              </li>
+              <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/popcorn.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wide">3:00PM - 3:15PM</p>
+                  <p class="mt-2">Snacks and Energizer</p>
+                </div>
+              </li>
+              <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/community.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wide">3:15PM - 4:15PM</p>
+                  <p class="mt-2">Community Documentary & Open Panel</p>
+                </div>
+              </li>
+              <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/trophy.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wide">4:15PM - 4:30PM</p>
+                  <p class="mt-2">Awarding and Raffle</p>
+                </div>
+              </li>
+              <li class="flex p-4 border-b">
+                <div class="w-24 text-center">
+                  <img class="w-12" src="assets/opening-remarks.svg" alt="">
+                </div>
+                <div class="flex-1 ml-4 text-lg">
+                  <p class="text-grey-darkest tracking-wide">4:30 - 5:00PM</p>
+                  <p class="mt-2">Closing Remarks</p>
+                </div>
+              </li>
+          </ul>
+    </div>
   </div>
-  <div id="sponsor" class="parallax" style="height: 50vh; background-image: url('assets/template/sponsor.jpg'); text-align: center; padding-top: 50px;">
-    <span style="font-family: 'trender', san-serif; font-size: 50px; color: #FFFFFF; padding: 5px; background: #ED6341;">&ensp;Be our Sponsor Partner&ensp;</span>
-    <br><br>
-    <span style="color: #FFFFFF; font-size: 30px; font-family: 'Open Sans', sans-serif; font-weight: 300 !important;">
-      Connect, converge, and create a lasting relationship <br>with the local tech community by becoming our partner
-    </span>
+  <div id="sponsor" class="parallax" style="background-image: url('assets/template/sponsor.jpg'); text-align: center;">
+    <div class="w3-hide-small" style="padding-top: 200px;">
+        <span style="font-family: 'trender', san-serif; font-size: 50px; color: #FFFFFF; padding: 5px; background: #ED6341;">&ensp;Be our Sponsor Partner&ensp;</span>
+        <br><br><br>
+        <span style="color: #FFFFFF; font-size: 30px; font-family: 'Open Sans', sans-serif; font-weight: 300 !important;">
+          Connect, converge, and create a lasting relationship <br>with the local tech community by becoming our partner
+        </span>
+    </div>
+
+    <div class="w3-hide-large w3-hide-medium" style="padding: 100px 10px 0px 10px;">
+        <span class="w3-hide-large w3-hide-medium" style="font-family: 'trender', san-serif; font-size: 40px; color: #FFFFFF; padding: 10px; background: #ED6341;">
+          Be our Sponsor Partner</span>
+        <br><br>
+        <span  style="color: #FFFFFF; font-size: 20px; font-family: 'Open Sans', sans-serif; font-weight: 300 !important;">
+            Connect, converge, and create a lasting relationship with the local tech community by becoming our partner
+        </span>
+    </div>
     <br><br>
     <a class="con-btn" href="https://goo.gl/forms/wnvovl4L1oYu0usQ2">Fill Up Here</a>
   </div>
-  <div id="register" style="text-align: center; height: 100vh; position: relative; background: #ED6341; font-family: 'Open Sans', sans-serif; font-weight: 300; padding: 200px 50px 50px 50px;">
-      <div style="position: absolute; top: 0; left: 0; background: #FFFFFF; padding: 50px 10px 10px 50px;">
-          <span style="font-family: 'trender', san-serif; font-size: 50px; color: #ED6341; padding: 5px;"><i class="fas fa-marker"></i>&ensp;Register Now!</span>
-      </div>
-      <iframe src="https://eventbrite.com/tickets-external?eid=49832338867&amp;ref=etckt" style="width: 700px; height: 500px;"></iframe>
+  <div id="register" style="text-align: center; position: relative; background: #ED6341; font-family: 'Open Sans', sans-serif; font-weight: 300;">
+    <div class="w3-hide-small" style="padding: 200px 50px 50px 50px; height: 100vh;">
+        <div style="position: absolute; top: 0; left: 0; background: #FFFFFF; padding: 50px 10px 10px 50px;">
+            <span style="font-family: 'trender', san-serif; font-size: 50px; color: #ED6341; padding: 5px;"><i class="fas fa-marker"></i>&ensp;Register Now!</span>
+        </div>
+        <iframe src="https://eventbrite.com/tickets-external?eid=49832338867&amp;ref=etckt" style="width: 700px; height: 500px;"></iframe>
+    </div>  
+    <div class="w3-hide-large w3-hide-medium" style="padding: 100px 10px 0px 10px;">
+        <span style="font-family: 'trender', san-serif; font-size: 40px; color: #ED6341; background: #FFFFFF; padding: 10px;"><i class="fas fa-marker"></i>&ensp;Register Now!</span>
+        <br><br>
+        <iframe src="https://eventbrite.com/tickets-external?eid=49832338867&amp;ref=etckt" style="width: 100%; height: 500px;"></iframe>
+        <br><br><br><br>
+    </div>
   </div>
   <footer style="position: relative; background: #000000; height: 50px;">
     <div style="position: absolute; top: 10px; right: 10px; color: #FFFFFF;">
@@ -496,5 +682,15 @@ body{
 
     var deadline = new Date(Date.parse(new Date("November 24, 2018")));
     initializeClock('clockdiv', deadline);
+
+    function collapseMenu()
+    {
+      var x = document.getElementById("mobileBar");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else { 
+          x.className = x.className.replace(" w3-show", "");
+      }
+    }
 </script>
 </html>
