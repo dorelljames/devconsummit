@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Devcon Summit 2018: Cebu Edition</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <style>
   @font-face {
     font-family: 'trender';
-    src: url('assets/fonts/trender.ttf');
+    src: url('./assets/fonts/trender.ttf');
   }
+
+  @font-face {
+    font-family: 'OS';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./assets/fonts/OpenSans-Light.ttf');
+  }
+
+  @font-face {
+    font-family: 'OS';
+    font-weight: 300;
+    font-style: normal;
+    src: url('./assets/fonts/OpenSans-Light.ttf');
+  }
+
   .gradBack{
     background: linear-gradient(271deg, #880959, #f0623a);
     background-size: 400% 400%;
@@ -59,7 +73,7 @@ a{
 }
 
 body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'OS', sans-serif;
   font-weight: 300 !important;
 }
 
@@ -67,7 +81,7 @@ body{
 
 .con-btn{
   padding: 10px 20px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'OS', sans-serif;
   color: #77216F;
   background: #FFFFFF;
   border: none;
@@ -82,11 +96,11 @@ body{
   color: #FFFFFF;
 }
 </style>
-<body>
+<body> 
   <div style="position: fixed; top: 0; z-index: 5; width: 100vw;">
       <div class="w3-bar w3-black">
           <a href="#home" class="w3-bar-item w3-hover-orange w3-button">
-            <div style="background: url('assets/template/cebu_white.png') no-repeat; background-position: 0px 5px; background-size: cover; width: 100px; height: 38px;"></div>
+            <div style="background: url('./assets/template/cebu_white.png') no-repeat; background-position: 0px 5px; background-size: cover; width: 100px; height: 38px;"></div>
           <a href="#about" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">About</a>
           <a href="#venue" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Venue</a>
           <a href="#program" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Program Flow</a>
@@ -107,8 +121,19 @@ body{
     <table style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;">
       <tr>
         <td style="text-align: center; vertical-align: middle; font-family: 'trender', sans-serif; color: #FFFFFF;">
-          <div style="margin-left: -20px; display:inline-block; background: url('./assets/template/line_white.png') no-repeat center; background-size: contain; width: 400px; height: 200px;"></div><br>
-          <div style="margin-left: 10px; margin-top: -50px; display:inline-block; background: url('./assets/template/white_tagline.png') no-repeat center; background-size: contain; width: 400px; height: 100px;"></div><br>
+          <table style="width: 100%; height: 340px;">
+            <tr>
+              <td style="height: 0; vertical-align: bottom; padding: 10px;">
+                <div style="margin-left: -50px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; max-width: 600px;max-height: 200px; height: 100%;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 0; vertical-align: top; padding: 10px;">
+                <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; max-width: 400px; height: 90%; max-height: 100px;"></div>
+          
+              </td>
+            </tr>
+          </table>
           <div id="clockdiv" style="font-size: 20px; display:inline-block; ">
             <table style="width: 100%;">
               <tr>
@@ -144,14 +169,14 @@ body{
         </td>
       </tr>
     </table>
-    <div class="w3-hide-small" style="position: absolute; bottom: 150px; z-index: 2; left: 0; text-align: center; width: 100%;">
+    <div class="w3-hide-small" style="position: absolute; bottom: 10vh; z-index: 2; left: 0; text-align: center; width: 100%;">
         <a class="con-btn" href="#register" >Register Now</a>
     </div>
     <div class="w3-hide-large w3-hide-medium" style="position: absolute; bottom: 50px; z-index: 2; left: 0; text-align: center; width: 100%;">
-        <a class="con-btn" href="#register" style="width: 50vw;">Register Now</a>
+        <a class="con-btn" href="#register" style="font-size: 30px;">Register Now</a>
     </div>
   </div>
-  <div id="about" class="w3-header parallax" style="background-image: url('assets/template/dev_img.jpg'); padding-top: 100px; position: relative; color: #FFFFFF; font-family: 'Open Sans', san-serif; font-weight: 300; font-size: 25px;">
+  <div id="about" class="w3-header parallax" style="background-image: url('assets/template/dev_img.jpg'); height: auto; position: relative; color: #FFFFFF; font-family: 'OS', san-serif; font-weight: 300; font-size: 20px;">
     <div style="padding: 50px 100px;" class="w3-hide-small">
       <table style="width: 100%;">
         <tr>
@@ -178,10 +203,10 @@ body{
         </tr>
       </table>
     </div>
-    <div style="padding: 10px 20px; text-align: center;" class="w3-hide-medium w3-hide-large">
-        <span style="font-family: 'trender', san-serif; font-size: 40px; color: #FFFFFF; background: #77216F; padding: 5px;">"What is DevCon Summit?"</span>
+    <div style="padding: 50px 10px 50px 10px; text-align: center;" class="w3-hide-medium w3-hide-large">
+        <span style="font-family: 'trender', san-serif; font-size: 30px; color: #FFFFFF; background: #77216F; padding: 5px;">"What is DevCon Summit?"</span>
         <br><br>
-        <ul style="font-size: 15px; text-align: left;">
+        <ul style="font-size: 20px; text-align: left;">
             <li>
                 The biggest annual developer conference in the Philippines, headed by the different Devcon chapters across the country<br><br>
             </li>
@@ -206,7 +231,7 @@ body{
           <span style="font-family: 'trender', san-serif; font-size: 50px; color: #FFFFFF; background: #77216F; padding: 5px;">&ensp;<i class="fas fa-map-marked-alt"></i>&ensp;The Venue&ensp;</span>
       </div>
   </div>
-  <div id="program" class="w3-header" style="position: relative; background: #77216F; font-family: 'Open Sans', sans-serif; font-weight: 300;">
+  <div id="program" class="w3-header" style="position: relative; background: #77216F; font-family: 'OS', sans-serif; font-weight: 300;">
       <div class="w3-hide-large w3-hide-medium w3-center" style="background: #FFFFFF; padding: 10px">
           <span style="font-family: 'trender', san-serif; font-size: 30px; color: #77216F; background: #FFFFFF; padding: 5px;">&ensp;<i class="fas fa-clipboard-list"></i>
             &ensp;Program Flow</span>
@@ -469,9 +494,9 @@ body{
   </div>
   <div id="sponsor" class="parallax" style="background-image: url('assets/template/sponsor.jpg'); text-align: center;">
     <div class="w3-hide-small" style="padding-top: 200px;">
-        <span style="font-family: 'trender', san-serif; font-size: 50px; color: #FFFFFF; padding: 5px; background: #ED6341;">&ensp;Be our Sponsor Partner&ensp;</span>
+        <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px; background: #ED6341;">&ensp;Be our Sponsor Partner&ensp;</span>
         <br><br><br>
-        <span style="color: #FFFFFF; font-size: 30px; font-family: 'Open Sans', sans-serif; font-weight: 300 !important;">
+        <span style="color: #FFFFFF; font-size: 30px; font-family: 'OS', sans-serif; font-weight: 300 !important;">
           Connect, converge, and create a lasting relationship <br>with the local tech community by becoming our partner
         </span>
     </div>
@@ -480,17 +505,17 @@ body{
         <span class="w3-hide-large w3-hide-medium" style="font-family: 'trender', san-serif; font-size: 40px; color: #FFFFFF; padding: 10px; background: #ED6341;">
           Be our Sponsor Partner</span>
         <br><br>
-        <span  style="color: #FFFFFF; font-size: 20px; font-family: 'Open Sans', sans-serif; font-weight: 300 !important;">
+        <span  style="color: #FFFFFF; font-size: 20px; font-family: 'OS', sans-serif; font-weight: 300 !important;">
             Connect, converge, and create a lasting relationship with the local tech community by becoming our partner
         </span>
     </div>
     <br><br>
     <a class="con-btn" href="https://goo.gl/forms/wnvovl4L1oYu0usQ2">Fill Up Here</a>
   </div>
-  <div id="register" style="text-align: center; position: relative; background: #ED6341; font-family: 'Open Sans', sans-serif; font-weight: 300;">
+  <div id="register" style="text-align: center; position: relative; background: #ED6341; font-family: 'OS', sans-serif; font-weight: 300;">
     <div class="w3-hide-small" style="padding: 200px 50px 50px 50px; height: 100vh;">
         <div style="position: absolute; top: 0; left: 0; background: #FFFFFF; padding: 50px 10px 10px 50px;">
-            <span style="font-family: 'trender', san-serif; font-size: 50px; color: #ED6341; padding: 5px;"><i class="fas fa-marker"></i>&ensp;Register Now!</span>
+            <span style="font-family: 'trender', san-serif; font-size: 45px; color: #ED6341; padding: 5px;"><i class="fas fa-marker"></i>&ensp;Register Now!</span>
         </div>
         <iframe src="https://eventbrite.com/tickets-external?eid=49832338867&amp;ref=etckt" style="width: 700px; height: 500px;"></iframe>
     </div>  
