@@ -91,29 +91,32 @@ body{
   transition: .3s all;
 }
 
-.con-btn:hover{
-  background: #77216F;
-  color: #FFFFFF;
+.active{
+    background: #861058 !important;
+}
+
+.bar-btn{
+  cursor: pointer;
 }
 </style>
 <body> 
   <div style="position: fixed; top: 0; z-index: 5; width: 100vw;">
       <div class="w3-bar w3-black">
-          <a href="#home" class="w3-bar-item w3-hover-orange w3-button">
+          <a onclick="goTo('#home', this)" class="w3-bar-item bar-btn active">
             <div style="background: url('./assets/template/cebu_white.png') no-repeat; background-position: 0px 5px; background-size: cover; width: 100px; height: 38px;"></div>
-          <a href="#about" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">About</a>
-          <a href="#venue" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Venue</a>
-          <a href="#program" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Program Flow</a>
-          <a href="#sponsor" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Sponsors</a>
-          <a href="#register" class="w3-bar-item w3-hide-small w3-padding-16 w3-hover-orange w3-button">Registration</a>
-          <a href="javascript:void(0)" class="w3-bar-item w3-padding-16 w3-button w3-right w3-hide-large w3-hide-medium" onclick="collapseMenu()">&#9776;</a>
+          <a onclick="goTo('#about', this)" class="w3-bar-item w3-hide-small w3-padding-16 bar-btn">About</a>
+          <a onclick="goTo('#venue', this)" class="w3-bar-item w3-hide-small w3-padding-16 bar-btn">Venue</a>
+          <a onclick="goTo('#program', this)" class="w3-bar-item w3-hide-small w3-padding-16 bar-btn">Program Flow</a>
+          <a onclick="goTo('#sponsor', this)" class="w3-bar-item w3-hide-small w3-padding-16 bar-btn">Sponsors</a>
+          <a onclick="goTo('#register', this)" class="w3-bar-item w3-hide-small w3-padding-16 bar-btn">Registration</a>
+          <a href="javascript:void(0)" class="w3-bar-item w3-padding-16 bar-btn w3-right w3-hide-large w3-hide-medium" onclick="collapseMenu()">&#9776;</a>
         </div>
         <div id="mobileBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
-            <a href="#about" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">About</a>
-            <a href="#venue" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">Venue</a>
-            <a href="#program" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">Program Flow</a>
-            <a href="#sponsor" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">Sponsors</a>
-            <a href="#register" class="w3-bar-item w3-padding-16 w3-hover-orange w3-button">Registration</a>
+            <a onclick="goTo('#about', this)" class="w3-bar-item w3-padding-16 bar-btn">About</a>
+            <a onclick="goTo('#venue', this)" class="w3-bar-item w3-padding-16 bar-btn">Venue</a>
+            <a onclick="goTo('#program', this)" class="w3-bar-item w3-padding-16 bar-btn">Program Flow</a>
+            <a onclick="goTo('#sponsor', this)" class="w3-bar-item w3-padding-16 bar-btn">Sponsors</a>
+            <a onclick="goTo('#register', this)" class="w3-bar-item w3-padding-16 bar-btn">Registration</a>
         </div>
   </div>
   <div style="position: relative; height: 100vh;" class="gradBack" id="home">
@@ -121,15 +124,15 @@ body{
     <table style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;">
       <tr>
         <td style="text-align: center; vertical-align: middle; font-family: 'trender', sans-serif; color: #FFFFFF;">
-          <table style="width: 100%; height: 400px;">
+          <table style="width: 100%; height: 340px;">
             <tr>
-              <td style="height: 0; vertical-align: bottom">
-                <div style="margin-left: -50px; display:inline-block; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; max-width: 600px;max-height: 200px; height: 100%;"></div>
+              <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
+                <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; max-width: 600px;max-height: 200px; height: 100%;"></div>
               </td>
             </tr>
             <tr>
-              <td style="height: 0; vertical-align: top;">
-                <div style="display:inline-block; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; max-width: 400px; height: 90%; max-height: 100px;"></div>
+              <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
+                <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; max-width: 400px; height: 90%; max-height: 100px;"></div>
           
               </td>
             </tr>
@@ -173,10 +176,60 @@ body{
         <a class="con-btn" href="#register" >Register Now</a>
     </div>
     <div class="w3-hide-large w3-hide-medium" style="position: absolute; bottom: 50px; z-index: 2; left: 0; text-align: center; width: 100%;">
-        <a class="con-btn" href="#register" style="font-size: 30px;">Register Now</a>
+        <a class="con-btn" href="#register" style="font-size: 25px;">Register Now</a>
     </div>
   </div>
-  <div id="about" class="w3-header parallax" style="background-image: url('assets/template/dev_img.jpg'); padding-top: 100px; position: relative; color: #FFFFFF; font-family: 'OS', san-serif; font-weight: 300; font-size: 20px;">
+  <div id="summary" style="background: #000000; color: #FFFFFF;">
+    <table style="height: 30vh; width: 70vw; text-align: center; margin: 0 auto;" class="w3-hide-small w3-hide-medium">
+      <tr>
+        <td style="font-size: 20px; line-height: 4vh;">
+            <i class="far fa-calendar-alt" style="font-size: 5vw; color: #861058;"></i><br>
+            November 24
+        </td>
+        <td style="font-size: 20px; line-height: 4vh;">
+            <i class="fas fa-map-marked-alt" style="font-size: 5vw; color: #861058;"></i><br>
+          Michael Richartz Hall
+        </td>
+        <td style="font-size: 20px; line-height: 4vh;">
+            <i class="fas fa-users" style="font-size: 5vw; color: #861058;"></i><br>
+          400+ Attendees
+        </td>
+        <td style="font-size: 20px; line-height: 4vh;">
+            <i class="fas fa-microphone-alt" style="font-size: 5vw; color: #861058;"></i><br>
+          15+ Speakers
+        </td>
+      </tr>
+    </table>
+    <table style="width: 70vw; text-align: center; margin: 0 auto;" class="w3-hide-large">
+        <tr>
+          <td style="font-size: 20px; line-height: 4vh; padding: 30px;">
+              <br><br><br><br>
+              <i class="far fa-calendar-alt" style="font-size: 50px; color: #861058;"></i><br>
+              November 24
+          </td>
+        </tr>
+        <tr>
+            <td style="font-size: 20px; line-height: 4vh; padding: 30px;">
+                <i class="fas fa-map-marked-alt" style="font-size: 50px; color: #861058;"></i><br>
+              Michael Richartz Hall
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 20px; line-height: 4vh; padding: 30px;">
+                <i class="fas fa-users" style="font-size: 50px; color: #861058;"></i><br>
+              400+ Attendees
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 20px; line-height: 4vh; padding: 30px;">
+                <i class="fas fa-microphone-alt" style="font-size: 50px; color: #861058;"></i><br>
+              15+ Speakers
+              <br><br><br><br>
+            </td>
+        </tr>
+      </table>
+  </div>
+  <div id="about" class="w3-header parallax" style="background-image: url('assets/template/dev_img.jpg'); height: auto; position: relative; color: #FFFFFF; font-family: 'OS', san-serif; font-weight: 300; font-size: 20px;">
     <div style="padding: 50px 100px;" class="w3-hide-small">
       <table style="width: 100%;">
         <tr>
@@ -203,7 +256,7 @@ body{
         </tr>
       </table>
     </div>
-    <div style="padding: 10px 20px; text-align: center;" class="w3-hide-medium w3-hide-large">
+    <div style="padding: 50px 10px 50px 10px; text-align: center;" class="w3-hide-medium w3-hide-large">
         <span style="font-family: 'trender', san-serif; font-size: 30px; color: #FFFFFF; background: #77216F; padding: 5px;">"What is DevCon Summit?"</span>
         <br><br>
         <ul style="font-size: 20px; text-align: left;">
@@ -554,6 +607,7 @@ body{
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="assets/template/js/particles.js"></script>
+<script src="assets/template/js/scroll.js"></script>
 <script>
   particlesJS("pheader", {
       "particles": {
@@ -717,5 +771,19 @@ body{
           x.className = x.className.replace(" w3-show", "");
       }
     }
+  
+  function goTo(hrc, el)
+  { 
+    var url = hrc.replace("#", "")
+    var elements = document.getElementsByClassName(' active');
+    while(elements.length > 0){
+        elements[0].classList.remove('active');
+    }
+
+    var x = document.getElementById("mobileBar");
+    x.className = x.className.replace(" w3-show", "");
+    el.className += " active";
+    EPPZScrollTo.scrollVerticalToElementById(url, 10);
+  }
 </script>
 </html>
