@@ -123,6 +123,48 @@ body{
 .bar-btn{
   cursor: pointer;
 }
+
+.techgroups {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #F4F5F8;
+}
+
+.techgroups:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #861058;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 </style>
 <body> 
   <div style="position: fixed; top: 0; z-index: 5; width: 100vw;">
@@ -132,6 +174,7 @@ body{
           <a onclick="goTo('#about', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">About</a>
           <a onclick="goTo('#venue', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Venue</a>
           <a onclick="goTo('#program', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Program Flow</a>
+          <a onclick="goTo('#partner', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Tech Groups</a>
           <a onclick="goTo('#sponsor', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Sponsors</a>
           <a onclick="goTo('#register', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Registration</a>
           <a href="javascript:void(0)" class="w3-bar-item w3-padding-16 bar-btn w3-right w3-hide-large " onclick="collapseMenu()">&#9776;</a>
@@ -140,6 +183,7 @@ body{
             <a onclick="goTo('#about', this)" class="w3-bar-item w3-padding-16 bar-btn">About</a>
             <a onclick="goTo('#venue', this)" class="w3-bar-item w3-padding-16 bar-btn">Venue</a>
             <a onclick="goTo('#program', this)" class="w3-bar-item w3-padding-16 bar-btn">Program Flow</a>
+            <a onclick="goTo('#partner', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Tech Groups</a>
             <a onclick="goTo('#sponsor', this)" class="w3-bar-item w3-padding-16 bar-btn">Sponsors</a>
             <a onclick="goTo('#register', this)" class="w3-bar-item w3-padding-16 bar-btn">Registration</a>
         </div>
@@ -583,6 +627,94 @@ body{
               </li>
           </ul>
     </div>
+  </div>
+  <div id="partner" style="background: #ED6341; text-align: center;">
+    <div class="w3-hide-small w3-hide-medium" style="padding-top: 100px;">
+        <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px; background: #861058;">&ensp;Tech Group Partners&ensp;</span>
+    </div>
+    <div class="w3-hide-large " style="padding: 100px 10px 0px 10px;">
+        <span class="w3-hide-large " style="font-family: 'trender', san-serif; font-size: 40px; color: #FFFFFF; padding: 10px; background: #861058;">
+          Tech Group Partners</span>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+      <!-- Photo grid -->
+      <div class="techgroups">
+        <img src="./assets/template/groups/cebugamedev.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">The most awesome game developers group in Cebu</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+      <div class="techgroups">
+        <img src="./assets/filler.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Uncovering soon</div>
+        </div>
+      </div>
+
+
+    <br><br>
+
+
   </div>
   <div id="sponsor" class="parallax" style="background-image: url('assets/template/sponsor.jpg'); text-align: center;">
     <div class="w3-hide-small w3-hide-medium" style="padding-top: 200px;">
