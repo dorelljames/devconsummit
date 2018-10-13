@@ -19,71 +19,55 @@
 
 <meta property="og:url" content="https://cebusummit.devcon.ph">
 <meta property="og:type" content="website"/>
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="icon" type="image/png" href="./assets/favicon.png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,300,300i,400,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
   @font-face {
     font-family: 'trender';
     src: url('./assets/fonts/trender.ttf');
   }
 
-  @font-face {
-    font-family: 'OS';
-    font-weight: 400;
-    font-style: normal;
-    src: url('./assets/fonts/OpenSans-Regular.ttf');
-  }
-
-  @font-face {
-    font-family: 'OS';
-    font-weight: 300;
-    font-style: normal;
-    src: url('./assets/fonts/OpenSans-Light.ttf');
-  }
-
-  @font-face {
-    font-family: 'OS';
-    font-weight: 800;
-    font-style: normal;
-    src: url('./assets/fonts/OpenSans-Bold.ttf');
-  }
-
   .gradBack{
     background: linear-gradient(271deg, #880959, #f0623a);
     background-size: 400% 400%;
 
-    -webkit-animation: GradientAnimate 7s ease infinite;
-    -moz-animation: GradientAnimate 7s ease infinite;
-    -o-animation: GradientAnimate 7s ease infinite;
-    animation: GradientAnimate 7s ease infinite;
+    -webkit-animation: AnimationName 24s ease infinite;
+    -moz-animation: AnimationName 24s ease infinite;
+    -o-animation: AnimationName 24s ease infinite;
+    animation: AnimationName 24s ease infinite;
+
   }
-@-webkit-keyframes GradientAnimate {
-    0%{background-position:93% 0%}
-    50%{background-position:0% 100%}
-    100%{background-position:93% 0%}
+@-webkit-keyframes AnimationName {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
 }
-@-moz-keyframes GradientAnimate {
-    0%{background-position:93% 0%}
-    50%{background-position:0% 100%}
-    100%{background-position:93% 0%}
+@-moz-keyframes AnimationName {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
 }
-@-o-keyframes GradientAnimate {
-    0%{background-position:93% 0%}
-    50%{background-position:0% 100%}
-    100%{background-position:93% 0%}
+@-o-keyframes AnimationName {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
 }
-@keyframes GradientAnimate { 
-    0%{background-position:93% 0%}
-    50%{background-position:0% 100%}
-    100%{background-position:93% 0%}
+@keyframes AnimationName { 
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
 }
 
 a{
   text-decoration: none;
+}
+
+*{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
 }
 
 .parallax { 
@@ -97,27 +81,21 @@ a{
     background-size: cover;
 }
 
-body{
-  font-family: 'OS', sans-serif;
-  font-weight: 300 !important;
-}
-
 /*devcon elements */
 
 .con-btn{
   padding: 10px 20px;
-  font-family: 'OS', sans-serif;
-  color: #77216F;
-  background: #FFFFFF;
-  border: none;
-  border-radius: 100px;
-  font-weight: 800;
+  color: #FFFFFF;
+  border: 1px #FFFFFF solid;
+  border-radius: 5px;
+  font-weight: 400;
   font-size: 20px;
   transition: .3s all;
 }
 
 .active{
-    background: #861058 !important;
+    background: #DD421F !important;
+    color: #FFFFFF;
 }
 
 .bar-btn{
@@ -126,10 +104,11 @@ body{
 
 .techgroups {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   display: inline-block;
   margin: 5px;
+  cursor: pointer;
 }
 
 .image {
@@ -167,14 +146,14 @@ body{
 }
 </style>
 <body> 
-  <div style="position: fixed; top: 0; z-index: 5; width: 100vw;">
-      <div class="w3-bar w3-black">
+  <div style="position: fixed; top: 0; left: 0; z-index: 5; width: 100vw; overflow: hidden; font-weight: 800; box-shadow: -1px 4px 17px 0px rgba(0,0,0,0.75);">
+      <div class="w3-bar w3-black" style="background: #252526 !important;">
           <a onclick="goTo('#home', this)" class="w3-bar-item bar-btn active">
             <div style="background: url('./assets/template/cebu_white.png') no-repeat; background-position: 0px 5px; background-size: cover; width: 100px; height: 38px;"></div>
           <a onclick="goTo('#about', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">About</a>
           <a onclick="goTo('#venue', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Venue</a>
           <a onclick="goTo('#program', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Program Flow</a>
-          <a onclick="goTo('#partner', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Tech Groups</a>
+          <a onclick="goTo('#partner', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Partners</a>
           <a onclick="goTo('#sponsor', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Sponsors</a>
           <a onclick="goTo('#register', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Registration</a>
           <a href="javascript:void(0)" class="w3-bar-item w3-padding-16 bar-btn w3-right w3-hide-large " onclick="collapseMenu()">&#9776;</a>
@@ -183,16 +162,16 @@ body{
             <a onclick="goTo('#about', this)" class="w3-bar-item w3-padding-16 bar-btn">About</a>
             <a onclick="goTo('#venue', this)" class="w3-bar-item w3-padding-16 bar-btn">Venue</a>
             <a onclick="goTo('#program', this)" class="w3-bar-item w3-padding-16 bar-btn">Program Flow</a>
-            <a onclick="goTo('#partner', this)" class="w3-bar-item w3-padding-16 bar-btn">Tech Groups</a>
+            <a onclick="goTo('#partner', this)" class="w3-bar-item w3-padding-16 bar-btn">Partners</a>
             <a onclick="goTo('#sponsor', this)" class="w3-bar-item w3-padding-16 bar-btn">Sponsors</a>
             <a onclick="goTo('#register', this)" class="w3-bar-item w3-padding-16 bar-btn">Registration</a>
         </div>
   </div>
-  <div style="position: relative; height: 100vh;" class="gradBack" id="home">
+  <div style="position: relative; height: 80vh;" class="gradBack" id="home">
     <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;" id="pheader"></div>
     <table style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;">
       <tr>
-        <td style="text-align: center; vertical-align: middle; font-family: 'trender', sans-serif; color: #FFFFFF;">
+        <td style="text-align: center; vertical-align: middle; font-weight: 400; color: #FFFFFF;">
           <table style="width: 100%; height: 340px;">
             <tr>
               <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
@@ -206,7 +185,7 @@ body{
               </td>
             </tr>
           </table>
-          <div id="clockdiv" style="font-size: 20px; display:inline-block; ">
+          <div id="clockdiv" style="font-size: 20px; display:inline-block; font-weight: 800 !important;">
             <table style="width: 100%;">
               <tr>
                 <td style="text-align: center;">
@@ -248,23 +227,23 @@ body{
         <a class="con-btn bar-btn" onclick="register()" style="font-size: 25px;">Register Now</a>
     </div>
   </div>
-  <div id="summary" style="background: #000000; color: #FFFFFF;">
-    <table style="height: 30vh; width: 70vw; text-align: center; margin: 0 auto;" class="w3-hide-small w3-hide-medium ">
+  <div id="summary" style="background: #252526; color: #FFFFFF; font-weight: 100;">
+    <table style="height: 20vh; width: 70vw; text-align: center; margin: 0 auto;" class="w3-hide-small w3-hide-medium ">
       <tr>
         <td style="font-size: 20px; line-height: 4vh;">
-            <i class="far fa-calendar-alt" style="font-size: 5vw; color: #861058;"></i><br>
+            <i class="icon ion-ios-calendar" style="font-size: 5vw; color: #ED6341;"></i><br>
             November 24
         </td>
         <td style="font-size: 20px; line-height: 4vh;">
-            <i class="fas fa-map-marked-alt" style="font-size: 5vw; color: #861058;"></i><br>
+            <i class="icon ion-ios-compass" style="font-size: 5vw; color: #ED6341;"></i><br>
           Michael Richartz Hall
         </td>
         <td style="font-size: 20px; line-height: 4vh;">
-            <i class="fas fa-users" style="font-size: 5vw; color: #861058;"></i><br>
+            <i class="icon ion-ios-contacts" style="font-size: 5vw; color: #ED6341;"></i><br>
           400+ Attendees
         </td>
         <td style="font-size: 20px; line-height: 4vh;">
-            <i class="fas fa-microphone-alt" style="font-size: 5vw; color: #861058;"></i><br>
+            <i class="icon ion-ios-mic" style="font-size: 5vw; color: #ED6341;"></i><br>
           15+ Speakers
         </td>
       </tr>
@@ -273,444 +252,533 @@ body{
         <tr>
           <td style="font-size: 20px; line-height: 4vh; padding: 30px;">
               <br><br><br><br>
-              <i class="far fa-calendar-alt" style="font-size: 50px; color: #861058;"></i><br>
+              <i class="far fa-calendar-alt" style="font-size: 50px; color: #ED6341;"></i><br>
               November 24
           </td>
         </tr>
         <tr>
             <td style="font-size: 20px; line-height: 4vh; padding: 30px;">
-                <i class="fas fa-map-marked-alt" style="font-size: 50px; color: #861058;"></i><br>
+                <i class="fas fa-map-marked-alt" style="font-size: 50px; color: #ED6341;"></i><br>
               Michael Richartz Hall
             </td>
         </tr>
         <tr>
             <td style="font-size: 20px; line-height: 4vh; padding: 30px;">
-                <i class="fas fa-users" style="font-size: 50px; color: #861058;"></i><br>
+                <i class="fas fa-users" style="font-size: 50px; color: #ED6341;"></i><br>
               400+ Attendees
             </td>
         </tr>
         <tr>
             <td style="font-size: 20px; line-height: 4vh; padding: 30px;">
-                <i class="fas fa-microphone-alt" style="font-size: 50px; color: #861058;"></i><br>
+                <i class="fas fa-microphone-alt" style="font-size: 50px; color: #ED6341;"></i><br>
               15+ Speakers
               <br><br><br><br>
             </td>
         </tr>
       </table>
   </div>
-  <div id="about" class="w3-header parallax" style="background-image: url('assets/template/dev_img.jpg'); height: auto; position: relative; color: #FFFFFF; font-family: 'OS', san-serif; font-weight: 300; font-size: 20px;">
-    <div style="padding: 50px 100px;" class="w3-hide-small w3-hide-medium">
-      <table style="width: 100%;">
-        <tr>
-          <td style="width: 40%; text-align: right; vertical-align: top;">
-              <span style="font-family: 'trender', san-serif; font-size: 50px; color: #FFFFFF; background: #77216F; padding: 5px;">&ensp;"What is <br>&ensp;DevCon Summit?"&ensp;</span>
-          </td>
-          <td style="vertical-align: top; text-shadow: 2px 2px 10px #77216F; padding-left: 10px;">
-            <ul>
-              <li>
-                  The biggest annual developer conference in the Philippines, headed by the different Devcon chapters across the country<br><br>
-              </li>
-              <li>
-                  Gathers aspiring and professional developers from all over the country in order for them to Sync, Support, and Succeed<br><br>
-              </li>
-              <li>
-                  Showcases the latest trends and tricks of today’s technology<br><br>
-              </li>
-              <li>
-                  Involvement of different tech groups to take part on this event and create a long lasting goals to the betterment of the community
-              </li>
-            </ul>
-              
-          </td>
-        </tr>
-      </table>
+
+  <div id="about" class="w3-header" style="background: #0C0C0C; height: auto; position: relative; color: #FFFFFF; font-weight: 300; font-size: 20px;">
+    <div class="w3-hide-small w3-hide-medium">
+        <div class="w3-row" style="padding: 150px 200px 0px 200px;">
+          <div class="w3-twothird w3-container">
+              <div style="width: 100%; height: 500px; background: url('./assets/template/dev_img.jpg') no-repeat top; background-size: contain;"></div>
+          </div>
+          <div class="w3-third w3-container">
+            <span style="font-family: 'trender', san-serif; font-size: 45px; line-height: 25px;">Get ready to emerge</span><br>
+            <div style="width: 100px; height: 10px; background: #ED6341;"></div>
+            <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">Engage in today's technologies and <br>have an in-depth knowledge on the breakouts</div>
+            <br><br>
+            <div style="font-weight: 300;">
+                We prepare exciting topics based on the current trends targetting the different sectors in the information technology field
+            </div>
+          </div>
+        </div>
+        <div class="w3-row" style="padding: 150px 200px 0px 200px;">
+          <div class="w3-third w3-container" style="text-align: right;">
+              <span style="font-family: 'trender', san-serif; font-size: 45px; line-height: 25px;">Bond with your local tech group leads</span><br>
+              <div style="width: 100px; height: 10px; background: #72B222; float: right;"></div>
+              <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">The people behind those code camps and meetups will all be there</div>
+              <br><br>
+              <div style="font-weight: 300;">
+                  We have partnered with 10 awesome tech groups for this worthwhile event. Visit their booths and collect tips, tricks, and freebies from them.
+              </div>
+          </div>
+          <div class="w3-twothird w3-container">
+              <div style="width: 100%; height: 500px; background: url('./assets/template/awesome.jpg') no-repeat top; background-size: contain;"></div>
+          </div>
+        </div>
+        <div class="w3-row" style="padding: 150px 200px 0px 200px;">
+          <div class="w3-twothird w3-container">
+              <div style="width: 100%; height: 500px; background: url('./assets/template/speakers.jpg') no-repeat top; background-size: contain;"></div>
+              <br><br><br>
+          </div>
+          <div class="w3-third w3-container">
+            <span style="font-family: 'trender', san-serif; font-size: 45px; line-height: 25px;">Handpicked Speakers on queue</span><br>
+            <div style="width: 100px; height: 10px; background: #7727FB;"></div>
+            <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">All the best speakers, local and foreign, all in!</div>
+            <br><br>
+            <div style="font-weight: 300;">
+                We just don't want to line up the best topics, we also partnered with the best speakers with intensive knowledge on each respective topic lineup.
+            </div>
+          </div>
+          
+        </div>
     </div>
-    <div style="padding: 50px 10px 50px 10px; text-align: center;" class=" w3-hide-large">
-        <span style="font-family: 'trender', san-serif; font-size: 30px; color: #FFFFFF; background: #77216F; padding: 5px;">"What is DevCon Summit?"</span>
+    <div class="w3-hide-large">
+        <div class="w3-row" style="padding: 20px 10px 0px 10px; text-align: center;">
+          <div class="w3-twothird w3-container">
+              <div style="width: 100%; height: 260px; background: url('./assets/template/dev_img.jpg') no-repeat top; background-size: contain;"></div>
+          </div>
+          <div class="w3-third w3-container">
+            <br>
+            <span style="font-family: 'trender', san-serif; font-size: 35px; line-height: 25px;">Get ready to emerge</span><br>
+            <div style="width: 100px; height: 10px; background: #ED6341; margin: 0 auto;"></div>
+            <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">Engage in today's technologies and <br>have an in-depth knowledge on the breakouts</div>
+            <br>
+            <div style="font-weight: 300;">
+                We prepare exciting topics based on the current trends targetting the different sectors in the information technology field
+            </div>
+            <br><br>
+          </div>
+        </div>
+        <div class="w3-row" style="padding: 20px 10px 0px 10px; text-align: center;">
+          <div class="w3-twothird w3-container">
+              <div style="width: 100%; height: 260px; background: url('./assets/template/awesome.jpg') no-repeat top; background-size: contain;"></div>
+          </div>
+          <div class="w3-third w3-container">
+              <br>
+              <span style="font-family: 'trender', san-serif; font-size: 35px; line-height: 25px;">Bond with your local tech group leads</span><br>
+              <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
+              <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">The people behind those code camps and meetups will all be there</div>
+              <br><br>
+              <div style="font-weight: 300;">
+                  We have partnered with 10 awesome tech groups for this worthwhile event. Visit their booths and collect tips, tricks, and freebies from them.
+              </div>
+              <br><br>
+          </div>
+        </div>
+        <div class="w3-row" style="padding: 20px 10px 0px 10px; text-align: center;">
+          <div class="w3-twothird w3-container">
+              <div style="width: 100%; height: 260px; background: url('./assets/template/speakers.jpg') no-repeat top; background-size: contain;"></div>
+          </div>
+          <div class="w3-third w3-container">
+            <br>
+            <span style="font-family: 'trender', san-serif; font-size: 35px; line-height: 25px;">Handpicked Speakers on queue</span><br>
+            <div style="width: 100px; height: 10px; background: #7727FB; margin: 0 auto;"></div>
+            <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">All the best speakers, local and foreign, all in!</div>
+            <br><br>
+            <div style="font-weight: 300;">
+                We just don't want to line up the best topics, we also partnered with the best speakers with intensive knowledge on each respective topic lineup.
+            </div>
+            <br><br>
+          </div>
+        </div>
+    </div>
+  <div id="venue" class="parallax" style="background-image: url('assets/template/mrhall.jpg'); position: relative; height: 100vh; text-align: center;">
+    <div class="w3-row w3-hide-small w3-hide-medium" style="padding: 150px 200px 0px 200px;">
+      <div class="w3-twothird w3-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.85721939614!2d123.90775791528719!3d10.353299569690735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a998eacee0c2c7%3A0x9b4bd9f5b718ad7d!2sMichael+Richartz+Building%2C+Nasipit%2C+Lungsod+ng+Cebu%2C+Lalawigan+ng+Cebu!5e0!3m2!1sen!2sph!4v1537443060366" style="border: 0px; width: 100%; height: 500px"></iframe>
+      </div>
+      <div class="w3-third w3-container">
+        <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px;">&ensp;The Venue&ensp;</span>
+        <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
+        <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+          Sound-proof, spacious, and cold
+        </div>
         <br><br>
-        <ul style="font-size: 20px; text-align: left;">
-            <li>
-                The biggest annual developer conference in the Philippines, headed by the different Devcon chapters across the country<br><br>
-            </li>
-            <li>
-                Gathers aspiring and professional developers from all over the country in order for them to Sync, Support, and Succeed<br><br>
-            </li>
-            <li>
-                Showcases the latest trends and tricks of today’s technology<br><br>
-            </li>
-            <li>
-                Involvement of different tech groups to take part on this event and create a long lasting goals to the betterment of the community
-            </li>
-        </ul>
+        <div style="font-weight: 800; font-size: 35px; text-align: left; line-height: 30px;">
+            Michael <br>Richartz Hall
+            <div style="font-weight: 300; font-size: 15px; text-align: left; line-height: 20px;">
+              University of San Carlos - Talamban Campus<br>
+              Talamban, Cebu City
+            </div>
+        </div>
       </div>
-  </div>
-  <div id="venue" style="position: relative;">
-      <div class="w3-hide-large  w3-center" style="background: #77216F; padding: 10px">
-          <span style="font-family: 'trender', san-serif; font-size: 30px; color: #FFFFFF; background: #77216F; padding: 5px;">&ensp;<i class="fas fa-map-marked-alt"></i>&ensp;The Venue&ensp;</span>
-      </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.85721939614!2d123.90775791528719!3d10.353299569690735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a998eacee0c2c7%3A0x9b4bd9f5b718ad7d!2sMichael+Richartz+Building%2C+Nasipit%2C+Lungsod+ng+Cebu%2C+Lalawigan+ng+Cebu!5e0!3m2!1sen!2sph!4v1537443060366" style="margin-bottom: -5px; border: 0px; width: 100%; height: 500px;"></iframe>
-      <div class="w3-hide-small w3-hide-medium" style="position: absolute; bottom: 0; right: 0; z-index: 1; background: #77216F; padding: 10px 50px 50px 10px;">
-          <span style="font-family: 'trender', san-serif; font-size: 50px; color: #FFFFFF; background: #77216F; padding: 5px;">&ensp;<i class="fas fa-map-marked-alt"></i>&ensp;The Venue&ensp;</span>
-      </div>
-  </div>
-  <div id="program" class="w3-header" style="position: relative; background: #77216F; font-family: 'OS', sans-serif; font-weight: 300;">
-      <div class="w3-hide-large  w3-center" style="background: #FFFFFF; padding: 10px">
-          <span style="font-family: 'trender', san-serif; font-size: 30px; color: #77216F; background: #FFFFFF; padding: 5px;">&ensp;<i class="fas fa-clipboard-list"></i>
-            &ensp;Program Flow</span>
-      </div>
-    <div class="w3-hide-small w3-hide-medium" style="position: absolute; top: 0; left: 0; background: #FFFFFF; padding: 50px 10px 10px 50px;">
-          <span style="font-family: 'trender', san-serif; font-size: 50px; color: #77216F; padding: 5px;"><i class="fas fa-clipboard-list"></i>&ensp;Program Flow</span>
     </div>
-    <div class="w3-hide-small w3-hide-medium " style="padding: 200px 50px 50px 50px;">
-        <table style="margin: 0 auto; width: 80vw;">
+    <div class="w3-row w3-hide-large" style="padding: 50px 10px 0px 10px;">
+      <div class="w3-twothird w3-container">
+        <span style="font-family: 'trender', san-serif; font-size: 35px; color: #FFFFFF; padding: 5px;">&ensp;The Venue&ensp;</span>
+        <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
+        <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+          Sound-proof, spacious, and cold
+        </div>
+        <br>
+      </div>
+      <div class="w3-third w3-container" style="text-align: center;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.85721939614!2d123.90775791528719!3d10.353299569690735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a998eacee0c2c7%3A0x9b4bd9f5b718ad7d!2sMichael+Richartz+Building%2C+Nasipit%2C+Lungsod+ng+Cebu%2C+Lalawigan+ng+Cebu!5e0!3m2!1sen!2sph!4v1537443060366" style="border: 0px; width: 100%; height: 260px"></iframe>
+        <br><br>
+        <div style="font-weight: 800; font-size: 35px; line-height: 35px;">
+            Michael <br>Richartz Hall
+            <div style="font-weight: 300; font-size: 15px; line-height: 20px;">
+              University of San Carlos - Talamban Campus<br>
+              Talamban, Cebu City
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="program" class="w3-header" style="position: relative; background: #77216F;">
+      <div class="w3-row w3-hide-medium w3-hide-small" style="padding: 150px 200px 0px 200px;">
+        <div class="w3-third w3-container" style="border-right: 1px solid #FFFFFF;">
+            <span style="font-family: 'trender', san-serif; font-size: 45px; line-height: 25px;">Summit Agenda</span><br>
+            <div style="width: 100px; height: 10px; background: #ED6341;"></div><br><br>
+            <div style="font-weight: 300; font-size: 30px;">
+                Saturday, 24 November<br>
+                08:00 - 17:00
+            </div>
+            
+        </div>
+        <div class="w3-twothird w3-container">
+          <table style="width: 100%; padding-left: 30px;">
             <tr>
-              <td style="width: 50%; vertical-align: top; padding: 10px;">
-                  <span style="font-family: 'trender', san-serif; font-size: 30px; color: #FFFFFF; padding: 5px;"><i class="far fa-sun"></i>&ensp;Morning Session</span>
-                  <br><br>
-                  <ul class="flex flex-col list-reset bg-grey-lightest border-b shadow hover:shadow-md">
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-10" src="assets/coffee-cup.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">7:00AM - 8:00AM</p>
-                          <p>Registration and Breakfast</p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/opening-remarks.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">8:00AM - 8:30AM</p>
-                          <p>Opening Remarks</p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/startup.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">8:30AM - 9:30AM</p>
-                          <p><span class="text-gradient leading-normal">Keynote 1:</span> <br> <span>Business Development for Startup Thinkers: Dev Edition</span></p>
-                          <p><span class="text-grey-darker leading-normal">Open Panel 1:</span> <br> <span>Starting up in the Philippines, Entrepreneur Mentality Essentials</span></p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/blockchain.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">9:30AM - 10:30AM</p>
-                          <p><span class="text-gradient leading-normal">Keynote 2:</span> <br> <span>The Future of Blockchain</span></p>
-                          <p><span class="text-grey-darker leading-normal">Open Panel 2:</span> <br> <span>Security, IoT, BlockChain, DevOps</span></p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/handshake.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">10:30AM - 11:00AM</p>
-                          <p>Co-partner Talk</p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/web-design.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">11:00AM - 12:00PM</p>
-                          <p><span class="text-gradient leading-normal">Keynote 3:</span> <br> <span>Design Ethics and Principles for UI / UX</span></p>
-                          <p><span class="text-grey-darker leading-normal">Open Panel 3:</span> <br> <span>Modern Design: UI/UX</span></p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/lunch.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">12:00PM - 1:00PM</p>
-                          <p class="mt-2"><b class="tracking-wide">LUNCH</b></p>
-                        </div>
-                      </li>
-                    </ul>
+              <td style="width: 100px; font-weight: 800;">
+                7:00
               </td>
-              <td style="width: 50%; vertical-align: top; padding: 10px;">
-                  <span style="font-family: 'trender', san-serif; font-size: 30px; color: #FFFFFF; padding: 5px;"><i class="fas fa-cloud"></i>&ensp;Afternoon Session</span>
-                  <br><br>
-                  <ul class="flex flex-col list-reset bg-grey-lightest border-b shadow hover:shadow-md">
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/lightning.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wid">1:00PM - 3:00PM</p>
-                          <p>
-                            <span class="text-grey-darker leading-normal">Lightning Talks:</span> <span>Startup</span>
-                          </p>
-                          <p>
-                            <span class="text-grey-darker leading-normal">Breakout sessions:</span>
-                            <ul>
-                              <li class="my-2">Blockchain and Security</li>
-                              <li class="mb-2">UI/UX</li>
-                              <li class="mb-2">Artificial Intelligence <span class="hidden sm:inline">(AI)</span></li>
-                              <li class="mb-2">Internet of Things <span class="hidden sm:inline">(IoT)</span></li>
-                            </ul>
-                          </p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/popcorn.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">3:00PM - 3:15PM</p>
-                          <p class="mt-2">Snacks and Energizer</p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/community.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">3:15PM - 4:15PM</p>
-                          <p class="mt-2">Community Documentary & Open Panel</p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/trophy.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">4:15PM - 4:30PM</p>
-                          <p class="mt-2">Awarding and Raffle</p>
-                        </div>
-                      </li>
-                      <li class="flex p-4 border-b">
-                        <div class="w-24 text-center">
-                          <img class="w-12" src="assets/opening-remarks.svg" alt="">
-                        </div>
-                        <div class="flex-1 ml-4 text-lg">
-                          <p class="text-grey-darkest tracking-wide">4:30 - 5:00PM</p>
-                          <p class="mt-2">Closing Remarks</p>
-                        </div>
-                      </li>
-                    </ul>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Registration and Breakfast</span><br>
+                <span style="font-size: 15px; font-weight: 300;">7:00 - 8:00 &ensp;|&ensp; Hall Entrance &ensp;|&ensp; </span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                8:00
+              </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Opening Remarks</span><br>
+                <span style="font-size: 15px; font-weight: 300;">8:00 - 8:30 &ensp;|&ensp; Main Hall &ensp;|&ensp; Christian Maderazo</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                8:30
+              </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Keynote 1: Business Development for Startup Thinkers: Dev Edition</span><br>
+                <span style="font-size: 15px; font-weight: 300;">8:30 - 9:15 &ensp;|&ensp; Main Hall &ensp;|&ensp; Alistair Israel</span><br>
+                <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Open Panel 1: Starting up in the Philippines, Entrepreneur Mentality Essentials</span><br>
+                <span style="font-size: 15px; font-weight: 300;">9:15 - 9:30 &ensp;|&ensp; Main Hall &ensp;|&ensp; Nanette Arbon, Vince Loremia, Dave Overton</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                9:30
+              </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Keynote 2: The Future of Blockchain</span><br>
+                <span style="font-size: 15px; font-weight: 300;">9:30 - 10:15 &ensp;|&ensp; Main Hall &ensp;|&ensp; Jerry Rapes</span><br>
+                <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Open Panel 2: Security, IoT, BlockChain, DevOps</span><br>
+                <span style="font-size: 15px; font-weight: 300;">10:15 - 10:30 &ensp;|&ensp; Main Hall &ensp;|&ensp; Michael Yu, TBA, TBA</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                10:30
+              </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Co-Partner Talk: Home Credit Consumer Finance Philippines Inc.</span><br>
+                <span style="font-size: 15px; font-weight: 300;">10:30 - 11:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; TBA</span><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                11:00
+              </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Keynote 3: Design Ethics and Principles for UI and UX</span><br>
+                <span style="font-size: 15px; font-weight: 300;">11:00 - 11:45 &ensp;|&ensp; Main Hall &ensp;|&ensp; TBA</span><br>
+                <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Open Panel 3: Modern Design: UI/UX</span><br>
+                <span style="font-size: 15px; font-weight: 300;">11:45 - 12:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; Francis Alturas, TBA, TBA</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                12:00
+              </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Lunch</span><br>
+                <span style="font-size: 15px; font-weight: 300;">12:00 - 13:00 &ensp;|&ensp; Hall Entrance &ensp;|&ensp; </span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                13:00
+              </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Breakout Sessions</span><br>
+                <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Startup Talks</span><br>
+                <span style="font-size: 15px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; Seph Mayol, Clint Cagang, Ruffy Heredia, Zenia Enriquez-Go</span><br>
+                <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Blockchain and Security</span><br>
+                <span style="font-size: 15px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 1 &ensp;|&ensp; Dexter Genterone, Michael Yu</span><br>
+                <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">UI & UX</span><br>
+                <span style="font-size: 15px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 2 &ensp;|&ensp; Mark Win Panerio, Patrick Pacaña, TBA</span><br>
+                <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Artificial Intelligence</span><br>
+                <span style="font-size: 15px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 3 &ensp;|&ensp; Albert Padin, Joseph Rivera</span><br>
+                <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Internet of Things</span><br>
+                <span style="font-size: 15px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 4 &ensp;|&ensp; Ren Campanilla</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                  15:00
+                </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Snacks</span><br>
+                <span style="font-size: 15px; font-weight: 300;">15:00 - 15:15 &ensp;|&ensp; Hall Entrance &ensp;|</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                15:15
+              </td>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Tech Community Open Panel</span><br>
+                <span style="font-size: 15px; font-weight: 300;">15:15 - 16:15 &ensp;|&ensp; Main Hall &ensp;|&ensp; All Tech Group Leads</span><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 100px; font-weight: 800;">
+                16:15
+              </td>
+              <td style="padding-bottom: 10px;">
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Awarding, Raffle, Closing Remarks</span><br>
+                <span style="font-size: 15px; font-weight: 300;">16:15 - 17:00 &ensp;|&ensp; Main Hall &ensp;|&ensp;</span><br>
               </td>
             </tr>
           </table>
-    </div>
-    <div class="w3-hide-large" style="padding: 10px;">
-        <ul class="flex flex-col list-reset bg-grey-lightest border-b shadow hover:shadow-md">
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-10" src="assets/coffee-cup.svg" alt="">
+          <br><br>
+        </div>
+      </div>
+      <div class="w3-row w3-hide-large" style="padding: 50px 10px 0px 10px;">
+          <div class="w3-third w3-container" style="border-right: 1px solid #FFFFFF; text-align: center;">
+              <span style="font-family: 'trender', san-serif; font-size: 35px; line-height: 25px;">Summit Agenda</span><br>
+              <div style="width: 100px; height: 10px; background: #ED6341; margin: 0 auto;"></div><br>
+              <div style="font-weight: 300; font-size: 20px;">
+                  Saturday, 24 November<br>
+                  08:00 - 17:00
               </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">7:00AM - 8:00AM</p>
-                <p>Registration and Breakfast</p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/opening-remarks.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">8:00AM - 8:30AM</p>
-                <p>Opening Remarks</p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/startup.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">8:30AM - 9:30AM</p>
-                <p><span class="text-gradient leading-normal">Keynote 1:</span> <br> <span>Business Development for Startup Thinkers: Dev Edition</span></p>
-                <p><span class="text-grey-darker leading-normal">Open Panel 1:</span> <br> <span>Starting up in the Philippines, Entrepreneur Mentality Essentials</span></p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/blockchain.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">9:30AM - 10:30AM</p>
-                <p><span class="text-gradient leading-normal">Keynote 2:</span> <br> <span>The Future of Blockchain</span></p>
-                <p><span class="text-grey-darker leading-normal">Open Panel 2:</span> <br> <span>Security, IoT, BlockChain, DevOps</span></p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/handshake.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">10:30AM - 11:00AM</p>
-                <p>Co-partner Talk</p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/web-design.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">11:00AM - 12:00PM</p>
-                <p><span class="text-gradient leading-normal">Keynote 3:</span> <br> <span>Design Ethics and Principles for UI / UX</span></p>
-                <p><span class="text-grey-darker leading-normal">Open Panel 3:</span> <br> <span>Modern Design: UI/UX</span></p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-              <div class="w-24 text-center">
-                <img class="w-12" src="assets/lunch.svg" alt="">
-              </div>
-              <div class="flex-1 ml-4 text-lg">
-                <p class="text-grey-darkest tracking-wide">12:00PM - 1:00PM</p>
-                <p class="mt-2"><b class="tracking-wide">LUNCH</b></p>
-              </div>
-            </li>
-            <li class="flex p-4 border-b">
-                <div class="w-24 text-center">
-                  <img class="w-12" src="assets/lightning.svg" alt="">
-                </div>
-                <div class="flex-1 ml-4 text-lg">
-                  <p class="text-grey-darkest tracking-wid">1:00PM - 3:00PM</p>
-                  <p>
-                    <span class="text-grey-darker leading-normal">Lightning Talks:</span> <span>Startup</span>
-                  </p>
-                  <p>
-                    <span class="text-grey-darker leading-normal">Breakout sessions:</span>
-                    <ul>
-                      <li class="my-2">Blockchain and Security</li>
-                      <li class="mb-2">UI/UX</li>
-                      <li class="mb-2">Artificial Intelligence <span class="hidden sm:inline">(AI)</span></li>
-                      <li class="mb-2">Internet of Things <span class="hidden sm:inline">(IoT)</span></li>
-                    </ul>
-                  </p>
-                </div>
-              </li>
-              <li class="flex p-4 border-b">
-                <div class="w-24 text-center">
-                  <img class="w-12" src="assets/popcorn.svg" alt="">
-                </div>
-                <div class="flex-1 ml-4 text-lg">
-                  <p class="text-grey-darkest tracking-wide">3:00PM - 3:15PM</p>
-                  <p class="mt-2">Snacks and Energizer</p>
-                </div>
-              </li>
-              <li class="flex p-4 border-b">
-                <div class="w-24 text-center">
-                  <img class="w-12" src="assets/community.svg" alt="">
-                </div>
-                <div class="flex-1 ml-4 text-lg">
-                  <p class="text-grey-darkest tracking-wide">3:15PM - 4:15PM</p>
-                  <p class="mt-2">Community Documentary & Open Panel</p>
-                </div>
-              </li>
-              <li class="flex p-4 border-b">
-                <div class="w-24 text-center">
-                  <img class="w-12" src="assets/trophy.svg" alt="">
-                </div>
-                <div class="flex-1 ml-4 text-lg">
-                  <p class="text-grey-darkest tracking-wide">4:15PM - 4:30PM</p>
-                  <p class="mt-2">Awarding and Raffle</p>
-                </div>
-              </li>
-              <li class="flex p-4 border-b">
-                <div class="w-24 text-center">
-                  <img class="w-12" src="assets/opening-remarks.svg" alt="">
-                </div>
-                <div class="flex-1 ml-4 text-lg">
-                  <p class="text-grey-darkest tracking-wide">4:30 - 5:00PM</p>
-                  <p class="mt-2">Closing Remarks</p>
-                </div>
-              </li>
-          </ul>
-    </div>
+              <br>
+          </div>
+          <div class="w3-twothird w3-container">
+            <table style="width: 100%;">
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  7:00
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Registration and Breakfast</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">7:00 - 8:00 &ensp;|&ensp; Hall Entrance &ensp;|&ensp; </span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  8:00
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Opening Remarks</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">8:00 - 8:30 &ensp;|&ensp; Main Hall &ensp;|&ensp; Christian Maderazo</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  8:30
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Keynote 1: Business Development for Startup Thinkers: Dev Edition</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">8:30 - 9:15 &ensp;|&ensp; Main Hall &ensp;|&ensp; Alistair Israel</span><br>
+                  <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Open Panel 1: Starting up in the Philippines, Entrepreneur Mentality Essentials</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">9:15 - 9:30 &ensp;|&ensp; Main Hall &ensp;|&ensp; Nanette Arbon, Vince Loremia, Dave Overton</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  9:30
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Keynote 2: The Future of Blockchain</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">9:30 - 10:15 &ensp;|&ensp; Main Hall &ensp;|&ensp; Jerry Rapes</span><br>
+                  <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Open Panel 2: Security, IoT, BlockChain, DevOps</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">10:15 - 10:30 &ensp;|&ensp; Main Hall &ensp;|&ensp; Michael Yu, TBA, TBA</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  10:30
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Co-Partner Talk: Home Credit Consumer Finance Philippines Inc.</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">10:30 - 11:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; TBA</span><br>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  11:00
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Keynote 3: Design Ethics and Principles for UI and UX</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">11:00 - 11:45 &ensp;|&ensp; Main Hall &ensp;|&ensp; TBA</span><br>
+                  <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Open Panel 3: Modern Design: UI/UX</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">11:45 - 12:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; Francis Alturas, TBA, TBA</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  12:00
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Lunch</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">12:00 - 13:00 &ensp;|&ensp; Hall Entrance &ensp;|&ensp; </span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  13:00
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Breakout Sessions</span><br>
+                  <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Startup Talks</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; Seph Mayol, Clint Cagang, Ruffy Heredia, Zenia Enriquez-Go</span><br>
+                  <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Blockchain and Security</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 1 &ensp;|&ensp; Dexter Genterone, Michael Yu</span><br>
+                  <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">UI & UX</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 2 &ensp;|&ensp; Mark Win Panerio, Patrick Pacaña, TBA</span><br>
+                  <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Artificial Intelligence</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 3 &ensp;|&ensp; Albert Padin, Joseph Rivera</span><br>
+                  <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Internet of Things</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 4 &ensp;|&ensp; Ren Campanilla</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                    15:00
+                  </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Snacks</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">15:00 - 15:15 &ensp;|&ensp; Hall Entrance &ensp;|</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  15:15
+                </td>
+                <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Tech Community Open Panel</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">15:15 - 16:15 &ensp;|&ensp; Main Hall &ensp;|&ensp; All Tech Group Leads</span><br>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: left; font-size: 15px; width: 15px; font-weight: 800;">
+                  16:15
+                </td>
+                <td style="padding-bottom: 10px;">
+                  <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Awarding, Raffle, Closing Remarks</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">16:15 - 17:00 &ensp;|&ensp; Main Hall &ensp;|&ensp;</span><br>
+                </td>
+              </tr>
+            </table>
+            <br><br>
+          </div>
+        </div>
   </div>
-  <div id="partner" style="background: #ED6341; text-align: center;">
+  <div id="partner" style="background: #0C0C0C; text-align: center;">
     <div class="w3-hide-small w3-hide-medium" style="padding-top: 100px;">
-        <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px; background: #861058;">&ensp;Tech Group Partners&ensp;</span>
+        <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px;">&ensp;Tech Group Partners&ensp;</span>
+        <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
+        <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+          Partnering with these awesome local Cebu Tech Groups
+        </div>
     </div>
     <div class="w3-hide-large " style="padding: 100px 10px 0px 10px;">
-        <span class="w3-hide-large " style="font-family: 'trender', san-serif; font-size: 40px; color: #FFFFFF; padding: 10px; background: #861058;">
-          Tech Group Partners</span>
+        <span style="font-family: 'trender', san-serif; font-size: 35px; color: #FFFFFF; padding: 5px;">&ensp;Tech Group Partners&ensp;</span>
+        <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
+        <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+            Partnering with these awesome local Cebu Tech Groups
+        </div>
     </div>
     <br>
     <br>
     <br>
     
       <!-- Photo grid -->
-      <div class="techgroups">
-        <img src="./assets/template/groups/cebugamedev.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Cebu Game Dev</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/template/groups/cebuwordpress.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Wordpress Cebu</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/filler.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Uncovering soon</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/filler.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Uncovering soon</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/filler.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Uncovering soon</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/filler.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Uncovering soon</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/filler.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Uncovering soon</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/filler.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Uncovering soon</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/filler.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Uncovering soon</div>
-        </div>
-      </div>
-
-      <div class="techgroups">
-        <img src="./assets/filler.jpg" alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">Uncovering soon</div>
-        </div>
-      </div>
-
+      <table style="width: 100%;">
+        <tr>
+          <td>
+            <div class="techgroups">
+              <img src="./assets/template/groups/cebugamedev.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Cebu Game Dev</div>
+              </div>
+            </div>
+      
+            <div class="techgroups">
+              <img src="./assets/template/groups/cebuwordpress.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Cebu Wordpress Meetup</div>
+              </div>
+            </div>
+      
+            <div class="techgroups">
+              <img src="./assets/filler.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Uncovering soon</div>
+              </div>
+            </div>
+      
+            <div class="techgroups">
+              <img src="./assets/filler.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Uncovering soon</div>
+              </div>
+            </div>
+      
+            <div class="techgroups">
+              <img src="./assets/filler.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Uncovering soon</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="techgroups">
+              <img src="./assets/filler.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Uncovering soon</div>
+              </div>
+            </div>
+      
+            <div class="techgroups">
+              <img src="./assets/filler.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Uncovering soon</div>
+              </div>
+            </div>
+      
+            <div class="techgroups">
+              <img src="./assets/filler.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Uncovering soon</div>
+              </div>
+            </div>
+      
+            <div class="techgroups">
+              <img src="./assets/filler.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Uncovering soon</div>
+              </div>
+            </div>
+      
+            <div class="techgroups">
+              <img src="./assets/filler.jpg" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Uncovering soon</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+     
 
     <br><br>
 
@@ -720,7 +788,7 @@ body{
     <div class="w3-hide-small w3-hide-medium" style="padding-top: 200px;">
         <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px; background: #ED6341;">&ensp;Be our Sponsor Partner&ensp;</span>
         <br><br><br>
-        <span style="color: #FFFFFF; font-size: 30px; font-family: 'OS', sans-serif; font-weight: 300 !important;">
+        <span style="color: #FFFFFF; font-size: 30px;font-weight: 300 !important;">
           Connect, converge, and create a lasting relationship <br>with the local tech community by becoming our partner
         </span>
     </div>
@@ -729,14 +797,14 @@ body{
         <span class="w3-hide-large " style="font-family: 'trender', san-serif; font-size: 40px; color: #FFFFFF; padding: 10px; background: #ED6341;">
           Be our Sponsor Partner</span>
         <br><br>
-        <span  style="color: #FFFFFF; font-size: 20px; font-family: 'OS', sans-serif; font-weight: 300 !important;">
+        <span  style="color: #FFFFFF; font-size: 20px;font-weight: 300 !important;">
             Connect, converge, and create a lasting relationship with the local tech community by becoming our partner
         </span>
     </div>
     <br><br>
     <a class="con-btn" href="https://goo.gl/forms/wnvovl4L1oYu0usQ2">Fill Up Here</a>
   </div>
-  <div id="register" style="text-align: center; position: relative; background: #ED6341; font-family: 'OS', sans-serif; font-weight: 300;">
+  <div id="register" style="text-align: center; position: relative; background: #ED6341;font-weight: 300;">
     <div class="w3-hide-small w3-hide-medium" style="padding: 200px 50px 50px 50px; min-height: 100vh;">
         <div style="position: absolute; top: 0; left: 0; background: #FFFFFF; padding: 50px 10px 10px 50px;">
             <span style="font-family: 'trender', san-serif; font-size: 45px; color: #ED6341; padding: 5px;"><i class="fas fa-marker"></i>&ensp;Register Now!</span>
@@ -858,115 +926,115 @@ body{
 <script src="assets/template/js/scroll.js"></script>
 <script>
   particlesJS("pheader", {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 5
-          },
-          "image": {
-            "src": "img/github.svg",
-            "width": 100,
-            "height": 100
-          }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
+  "particles": {
+    "number": {
+      "value": 29,
+      "density": {
+        "enable": false,
+        "value_area": 78.91476416322726
+      }
+    },
+    "color": {
+      "value": "#fafafa"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000"
+      },
+      "polygon": {
+        "nb_sides": 3
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 28.05971106514665,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 0,
+        "size_min": 2.436231636904035,
+        "sync": true
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 112.2388442605866,
+      "color": "#ffffff",
+      "opacity": 1,
+      "width": 2
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,
+      "direction": "top",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 0,
+        "rotateY": 0
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
         "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 6,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
+          "opacity": 1
         }
       },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "grab"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 140,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
       },
-      "retina_detect": true
-    });
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
 
     function getTimeRemaining(endtime) {
       var t = Date.parse(endtime) - Date.parse(new Date());
