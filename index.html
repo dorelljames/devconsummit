@@ -168,74 +168,79 @@ a{
         </div>
   </div>
   <div style="position: relative; height: 80vh;" class="gradBack" id="home">
-    <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;" id="pheader"></div>
-    <table style="width: 100%; height: 100%; margin: 0 auto; z-index: 0;">
-      <tr>
-        <td style="text-align: center; vertical-align: middle; font-weight: 400; color: #FFFFFF;">
-          <table style="width: 100%; height: 340px;" class="w3-hide-small w3-hide-medium">
+    <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;" id="pheader"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; z-index: 1;">
+      <div class="w3-hide-small w3-hide-medium" style="height: 200px;"></div>
+      <div class="w3-hide-large" style="height: 50px;"></div>
+        <table style="width: 100%; height: 100%; margin: 0 auto;">
             <tr>
-              <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
-                <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; max-width: 600px;max-height: 200px; height: 100%;"></div>
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
-                <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; max-width: 400px; height: 90%; max-height: 100px;"></div>
-          
+              <td style="text-align: center; vertical-align: middle; font-weight: 400; color: #FFFFFF;">
+                <table style="width: 100%; height: 340px;" class="w3-hide-small w3-hide-medium">
+                  <tr>
+                    <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
+                      <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; max-width: 600px;max-height: 200px; height: 100%;"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
+                      <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; max-width: 400px; height: 90%; max-height: 100px;"></div>
+                
+                    </td>
+                  </tr>
+                </table>
+                <table style="width: 100%;" class="w3-hide-large">
+                  <tr>
+                    <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
+                      <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; height: 200px;"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
+                      <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; width: 100%; height: 50px;"></div>
+                    </td>
+                  </tr>
+                </table>
+                <div id="clockdiv" style="font-size: 20px; display:inline-block;">
+                  <table style="width: 100%;">
+                    <tr>
+                      <td style="text-align: center;">
+                          <span class="days"></span>
+                      </td>
+                      <td style="text-align: center;">
+                          <span class="hours"></span>
+                      </td>
+                      <td style="text-align: center;">
+                          <span class="minutes"></span>
+                      </td>
+                      <td style="text-align: center;">
+                          <span class="seconds"></span>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; width: 50px;">
+                            DD
+                        </td>
+                        <td style="text-align: center; width: 50px;">
+                            HH
+                        </td>
+                        <td style="text-align: center; width: 50px;">
+                            MM
+                        </td>
+                        <td style="text-align: center; width: 50px;">
+                            SS
+                        </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="w3-hide-large">
+                    <br><br>
+                  <a class="con-btn bar-btn" onclick="register()" style="font-size: 20px;">Register Now</a>
+                </div>
               </td>
             </tr>
           </table>
-          <table style="width: 100%;" class="w3-hide-large">
-            <tr>
-              <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
-                <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; height: 200px;"></div>
-              </td>
-            </tr>
-            <tr>
-              <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
-                <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; width: 100%; height: 50px;"></div>
-              </td>
-            </tr>
-          </table>
-          <div id="clockdiv" style="font-size: 20px; display:inline-block;">
-            <table style="width: 100%;">
-              <tr>
-                <td style="text-align: center;">
-                    <span class="days"></span>
-                </td>
-                <td style="text-align: center;">
-                    <span class="hours"></span>
-                </td>
-                <td style="text-align: center;">
-                    <span class="minutes"></span>
-                </td>
-                <td style="text-align: center;">
-                    <span class="seconds"></span>
-                </td>
-              </tr>
-              <tr>
-                  <td style="text-align: center; width: 50px;">
-                      DD
-                  </td>
-                  <td style="text-align: center; width: 50px;">
-                      HH
-                  </td>
-                  <td style="text-align: center; width: 50px;">
-                      MM
-                  </td>
-                  <td style="text-align: center; width: 50px;">
-                      SS
-                  </td>
-              </tr>
-            </table>
-          </div>
-          <div class="w3-hide-large">
-              <br><br>
-            <a class="con-btn bar-btn" onclick="register()" style="font-size: 20px;">Register Now</a>
-          </div>
-        </td>
-      </tr>
-    </table>
+    </div>
+   
     <div class="w3-hide-small w3-hide-medium" style="position: absolute; bottom: 10vh; z-index: 2; left: 0; text-align: center; width: 100%;">
         <a class="con-btn bar-btn" onclick="register()">Register Now</a>
     </div>
