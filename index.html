@@ -61,6 +61,14 @@
     100%{background-position:82% 0%}
 }
 
+.curve{
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 18px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 18px -2px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 18px -2px rgba(0,0,0,0.75);
+}
+
 a{
   text-decoration: none;
 }
@@ -72,7 +80,7 @@ a{
 
 .parallax { 
     /* Set a specific height */
-    height: 100vh; 
+    /* height: 100vh;  */
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -111,6 +119,13 @@ a{
   cursor: pointer;
 }
 
+.sponsorship{
+  width: 300px;
+  height: 200px;
+  background: red;
+  display: inline-block;
+}
+
 .image {
   display: block;
   width: 100%;
@@ -136,13 +151,20 @@ a{
 
 .text {
   color: #861058;
-  font-size: 20px;
+  font-size: 15px;
   position: absolute;
+  font-weight: 800;
   top: 50%;
   left: 50%;
+  width: 180px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.text a{
+  text-decoration: none;
+  font-weight: 800;
 }
 </style>
 <body> 
@@ -152,18 +174,20 @@ a{
             <div style="background: url('./assets/template/cebu_white.png') no-repeat; background-position: 0px 5px; background-size: cover; width: 100px; height: 38px;"></div>
           <a onclick="goTo('#about', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">About</a>
           <a onclick="goTo('#venue', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Venue</a>
-          <a onclick="goTo('#program', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Program Flow</a>
-          <a onclick="goTo('#partner', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Partners</a>
+          <a onclick="goTo('#program', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Agenda</a>
+          <a onclick="goTo('#speakers', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Speakers</a>
           <a onclick="goTo('#sponsor', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Sponsors</a>
+          <a onclick="goTo('#partner', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Partners</a>
           <a onclick="goTo('#register', this)" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Registration</a>
           <a href="javascript:void(0)" class="w3-bar-item w3-padding-16 bar-btn w3-right w3-hide-large " onclick="collapseMenu()">&#9776;</a>
         </div>
         <div id="mobileBar" class="w3-bar-block w3-black w3-hide w3-hide-large ">
             <a onclick="goTo('#about', this)" class="w3-bar-item w3-padding-16 bar-btn">About</a>
             <a onclick="goTo('#venue', this)" class="w3-bar-item w3-padding-16 bar-btn">Venue</a>
-            <a onclick="goTo('#program', this)" class="w3-bar-item w3-padding-16 bar-btn">Program Flow</a>
-            <a onclick="goTo('#partner', this)" class="w3-bar-item w3-padding-16 bar-btn">Partners</a>
+            <a onclick="goTo('#program', this)" class="w3-bar-item w3-padding-16 bar-btn">Agenda</a>
+            <a onclick="goTo('#speakers', this)" class="w3-bar-item w3-padding-16 bar-btn">Speakers</a>
             <a onclick="goTo('#sponsor', this)" class="w3-bar-item w3-padding-16 bar-btn">Sponsors</a>
+            <a onclick="goTo('#partner', this)" class="w3-bar-item w3-padding-16 bar-btn">Partners</a>
             <a onclick="goTo('#register', this)" class="w3-bar-item w3-padding-16 bar-btn">Registration</a>
         </div>
   </div>
@@ -236,8 +260,7 @@ a{
             </tr>
           </table>
     </div>
-   
-    <div class="w3-hide-small w3-hide-medium" style="position: absolute; bottom: 10vh; z-index: 2; left: 0; text-align: center; width: 100%;">
+    <div class="w3-hide-small w3-hide-medium" style="position: absolute; bottom: 5vh; z-index: 2; left: 0; text-align: center; width: 100%;">
         <a class="con-btn bar-btn" onclick="register()">Register Now</a>
     </div>
   </div>
@@ -524,7 +547,7 @@ a{
               <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
                 <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Breakout Sessions</span><br>
                 <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Startup Talks</span><br>
-                <span style="font-size: 15px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; Seph Mayol, Clint Cagang, Ruffy Heredia, Zenia Enriquez-Go</span><br>
+                <span style="font-size: 15px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; Seph Mayol, Clint Hennesy Cagang, Ruffy Heredia, Zenia Enriquez-Go</span><br>
                 <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Blockchain and Security</span><br>
                 <span style="font-size: 15px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 1 &ensp;|&ensp; Dexter Genterone, Michael Yu</span><br>
                 <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">UI & UX</span><br>
@@ -567,7 +590,7 @@ a{
         </div>
       </div>
       <div class="w3-row w3-hide-large" style="padding: 50px 10px 0px 10px;">
-          <div class="w3-third w3-container" style="border-right: 1px solid #FFFFFF; text-align: center;">
+          <div class="w3-third w3-container" style="text-align: center;">
               <span style="font-family: 'trender', san-serif; font-size: 35px; line-height: 25px;">Summit Agenda</span><br>
               <div style="width: 100px; height: 10px; background: #ED6341; margin: 0 auto;"></div><br>
               <div style="font-weight: 300; font-size: 20px;">
@@ -593,7 +616,7 @@ a{
                 </td>
                 <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
                   <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Opening Remarks</span><br>
-                  <span style="font-size: 12px; font-weight: 300;">8:00 - 8:30 &ensp;|&ensp; Main Hall &ensp;|&ensp; Christian Maderazo</span>
+                  <span style="font-size: 12px; font-weight: 300;">8:00 - 8:30 &ensp;|&ensp; Main Hall &ensp;|&ensp; Engr. Christian Maderazo</span>
                 </td>
               </tr>
               <tr>
@@ -654,7 +677,7 @@ a{
                 <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px;">
                   <span style="font-size: 20px; font-weight: 800; color: #ED6341;">Breakout Sessions</span><br>
                   <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Startup Talks</span><br>
-                  <span style="font-size: 12px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; Seph Mayol, Clint Cagang, Ruffy Heredia, Zenia Enriquez-Go</span><br>
+                  <span style="font-size: 12px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Main Hall &ensp;|&ensp; Seph Mayol, Clint Hennesy Cagang, Ruffy Heredia, Zenia Enriquez-Go</span><br>
                   <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">Blockchain and Security</span><br>
                   <span style="font-size: 12px; font-weight: 300;">13:00 - 15:00 &ensp;|&ensp; Room 1 &ensp;|&ensp; Dexter Genterone, Michael Yu</span><br>
                   <span style="font-size: 15px; font-weight: 400; font-style: italic; color: #E7C92D;">UI & UX</span><br>
@@ -697,6 +720,254 @@ a{
           </div>
         </div>
   </div>
+<div id="speakers" style="background: #0C0C0C; text-align: center;">
+      <div class="w3-hide-small w3-hide-medium" style="padding-top: 100px;">
+          <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px;">&ensp;Speakers&ensp;</span>
+          <div style="width: 100px; height: 10px; background: #861058; margin: 0 auto;"></div>
+          <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+            The voices you'll here on the summit. Trust us, they know a lot of stuff
+          </div>
+      </div>
+      <div class="w3-hide-large " style="padding: 100px 10px 0px 10px; text-align: center;">
+          <span style="font-family: 'trender', san-serif; font-size: 35px; color: #FFFFFF; line-height: 20px;">Speakers</span>
+          <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
+          <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+              The voices you'll here on the summit. Trust us, they know a lot of stuff
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      
+        <!-- Photo grid -->
+        <table style="width: 100%;">
+          <tr>
+            <td>
+              <div class="techgroups curve">
+                <img src="./assets/template/speakers/Maderazo.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Engr. Christian Maderazo</div>
+                </div>
+              </div>
+              <div class="techgroups curve">
+                <img src="./assets/template/speakers/alistair.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Alistair Israel</div>
+                </div>
+              </div>
+              <div class="techgroups curve">
+                <img src="./assets/template/speakers/arbon.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Nanette Arbon</div>
+                </div>
+              </div>
+              <div class="techgroups curve">
+                <img src="./assets/template/speakers/david.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Dave Overton</div>
+                </div>
+              </div>
+              <div class="techgroups curve">
+                <img src="./assets/template/speakers/rapes.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Jerry Rapes</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/michael.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Michael Yu</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/alturas.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Francis Alturas</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/seph.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Seph Mayol</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/clint.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Clint Hennesy Cagang</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/ruffy.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Ruffy Heredia</div>
+                  </div>
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/zenia.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Zenia Mai Go</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/dexter.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Dexter John Genterone</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/mark.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Mark Win Panerio</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/patrick.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Patrick John Pacaña</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/albert.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Albert Padin</div>
+                  </div>
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/joseph.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Joseph Rivera</div>
+                  </div>
+                </div>
+                <div class="techgroups curve">
+                  <img src="./assets/template/speakers/ren.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Ren Campanilla</div>
+                  </div>
+                </div>
+            </td>
+          </tr>
+        </table>
+      <br><br>
+  
+  </div>
+  <div id="sponsor" class="parallax" style="background-image: url('assets/template/colors.jpg'); text-align: center;">
+    <div class="w3-row w3-hide-medium w3-hide-small" style="padding: 150px 200px 0px 200px;">
+        <div class="w3-third w3-container" style="border-right: 1px solid #FFFFFF;">
+            <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px;">&ensp;Sponsors&ensp;</span>
+            <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
+            <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+              Interested to become one? E-mail us at cebu@devcon.ph and we'll send compelling sponsorship packages for you
+            </div>
+            
+        </div>
+        <div class="w3-twothird w3-container">
+          <table style="width: 100%; padding-left: 30px;">
+            <tr>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px; text-align: center;">
+                <span style="font-size: 30px; font-weight: 800; color: #72B222;">Co Presentor</span><br><br>
+                <div class="techgroups curve">
+                  <img src="./assets/template/sponsors/homecredit.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">
+                        <a href="https://www.homecredit.ph/about-us/">Home Credit Finance Philippines Inc.</a>
+                    </div>
+                  </div>
+                </div>  
+              </td>
+            </tr>
+            <tr>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px; text-align: center;">
+                <br>
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Bronze</span><br><br>
+                <div class="techgroups curve">
+                  <img src="./assets/template/sponsors/arcanys.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">
+                        <a href="https://www.arcanys.com/about/our-story">Arcanys</a>
+                    </div>
+                  </div>
+                </div> 
+                <div class="techgroups curve">
+                  <img src="./assets/template/sponsors/cloudstaff.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                      <div class="text">
+                          <a href="https://www.cloudstaff.com/about-cloudstaff/">Cloudstaff</a>
+                      </div>
+                  </div>
+                </div>  
+
+              </td>
+            </tr>
+          </table>
+          <br><br>
+        </div>
+    </div>
+    <div class="w3-row w3-hide-large" style="padding: 50px 10px 0px 10px;">
+        <div class="w3-third w3-container">
+            <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px;">&ensp;Sponsors&ensp;</span>
+            <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
+            <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+              Interested to become one? E-mail us at cebu@devcon.ph and we'll send compelling sponsorship packages for you
+            </div>
+            
+        </div>
+        <div class="w3-twothird w3-container">
+          <table style="width: 100%; padding-left: 30px;">
+            <tr>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px; text-align: center;">
+                <br><br>
+                <span style="font-size: 30px; font-weight: 800; color: #72B222;">Co Presentor</span><br><br>
+                <div class="techgroups curve">
+                  <img src="./assets/template/sponsors/homecredit.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">
+                        <a href="https://www.homecredit.ph/about-us/">Home Credit Finance Philippines Inc.</a>
+                    </div>
+                  </div>
+                </div>  
+              </td>
+            </tr>
+            <tr>
+              <td style="border-bottom: 1px solid #FFFFFF; padding-bottom: 10px; text-align: center;">
+                <br>
+                <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Bronze</span><br><br>
+                <div class="techgroups curve">
+                  <img src="./assets/template/sponsors/arcanys.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">
+                        <a href="https://www.arcanys.com/about/our-story">Arcanys</a>
+                    </div>
+                  </div>
+                </div> 
+                <div class="techgroups curve">
+                  <img src="./assets/template/sponsors/cloudstaff.jpg" alt="Avatar" class="image">
+                  <div class="overlay">
+                      <div class="text">
+                          <a href="https://www.cloudstaff.com/about-cloudstaff/">Cloudstaff</a>
+                      </div>
+                  </div>
+                </div>  
+
+              </td>
+            </tr>
+          </table>
+          <br><br>
+        </div>
+    </div>
+  </div>
   <div id="partner" style="background: #0C0C0C; text-align: center;">
     <div class="w3-hide-small w3-hide-medium" style="padding-top: 100px;">
         <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px;">&ensp;Tech Group Partners&ensp;</span>
@@ -720,35 +991,35 @@ a{
       <table style="width: 100%;">
         <tr>
           <td>
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/template/groups/cebugamedev.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Cebu Game Dev</div>
               </div>
             </div>
       
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/template/groups/cebuwordpress.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Cebu Wordpress Meetup</div>
               </div>
             </div>
       
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/filler.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Uncovering soon</div>
               </div>
             </div>
       
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/filler.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Uncovering soon</div>
               </div>
             </div>
       
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/filler.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Uncovering soon</div>
@@ -758,35 +1029,35 @@ a{
         </tr>
         <tr>
           <td>
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/filler.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Uncovering soon</div>
               </div>
             </div>
       
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/filler.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Uncovering soon</div>
               </div>
             </div>
       
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/filler.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Uncovering soon</div>
               </div>
             </div>
       
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/filler.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Uncovering soon</div>
               </div>
             </div>
       
-            <div class="techgroups">
+            <div class="techgroups curve">
               <img src="./assets/filler.jpg" alt="Avatar" class="image">
               <div class="overlay">
                 <div class="text">Uncovering soon</div>
@@ -801,34 +1072,25 @@ a{
 
 
   </div>
-  <div id="sponsor" class="parallax" style="background-image: url('assets/template/sponsor.jpg'); text-align: center;">
-    <div class="w3-hide-small w3-hide-medium" style="padding-top: 200px;">
-        <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px; background: #ED6341;">&ensp;Be our Sponsor Partner&ensp;</span>
-        <br><br><br>
-        <span style="color: #FFFFFF; font-size: 30px;font-weight: 300 !important;">
-          Connect, converge, and create a lasting relationship <br>with the local tech community by becoming our partner
-        </span>
-    </div>
-
-    <div class="w3-hide-large " style="padding: 100px 10px 0px 10px;">
-        <span class="w3-hide-large " style="font-family: 'trender', san-serif; font-size: 40px; color: #FFFFFF; padding: 10px; background: #ED6341;">
-          Be our Sponsor Partner</span>
-        <br><br>
-        <span  style="color: #FFFFFF; font-size: 20px;font-weight: 300 !important;">
-            Connect, converge, and create a lasting relationship with the local tech community by becoming our partner
-        </span>
-    </div>
-    <br><br>
-    <a class="con-btn" href="https://goo.gl/forms/wnvovl4L1oYu0usQ2">Fill Up Here</a>
-  </div>
-  <div id="register" style="text-align: center; position: relative; background: #ED6341;font-weight: 300;">
-    <div class="w3-hide-small w3-hide-medium" style="padding: 200px 50px 50px 50px; min-height: 100vh;">
-        <div style="position: absolute; top: 0; left: 0; background: #FFFFFF; padding: 50px 10px 10px 50px;">
-            <span style="font-family: 'trender', san-serif; font-size: 45px; color: #ED6341; padding: 5px;"><i class="fas fa-marker"></i>&ensp;Register Now!</span>
+  <div id="register" style="text-align: center; position: relative; background: #252526;font-weight: 300;">
+      <div class="w3-hide-small w3-hide-medium" style="padding-top: 100px;">
+        <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px;">&ensp;Register Now!&ensp;</span>
+        <div style="width: 100px; height: 10px; background: #ED6341; margin: 0 auto;"></div>
+        <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+          Don't miss out the fun activities of this once in a year Summit!<br>Register now and secure your slot!
         </div>
+    </div>
+    <div class="w3-hide-large " style="padding: 100px 10px 0px 10px; text-align: center;">
+        <span style="font-family: 'trender', san-serif; font-size: 35px; color: #FFFFFF; line-height: 20px;">Register Now!</span>
+        <div style="width: 100px; height: 10px; background: #ED6341; margin: 0 auto;"></div>
+        <div style="font-weight: 100; font-size: 15px; line-height: 20px; padding-top: 10px; font-style: italic;">
+            Don't miss out the fun activities of this once in a year Summit!<br>Register now and secure your slot!
+        </div>
+    </div>
+    <div class="w3-hide-small w3-hide-medium" style="padding: 50px 50px 50px 50px; min-height: 100vh;">
         <iframe src="https://eventbrite.com/tickets-external?eid=49832338867&amp;ref=etckt" style="width: 700px; height: 500px;"></iframe>
         <br><br>
-        <div style="margin: 0 auto; text-align: left !important; color: #FFFFFF !important; font-size: 15px; padding: 20px; width: 700px;">
+        <div style="margin: 0 auto; text-align: left !important; color: #FFFFFF !important; font-size: 15px; padding: 20px; width: 700px; font-weight: 300;">
             <span style="font-family: 'trender', san-serif; font-size: 30px; color: #FFFFFF; padding: 5px;">Offline Payments</span>
             <br><br>
             <p>1. Order the ticket from the ticket form above and click &quot;Order Now&quot;<br>
@@ -857,7 +1119,7 @@ a{
               <br>
               <p>7. Once you received a confirmation email from cebu@devcon.ph, your slot is already reserved. </p>
               <br>
-              <p style="color: #861058; text-align: center;"><span style="font-weight: 800;">IMPORTANT: </span> Deadline for email submission is 5 business days after registration. Failure to comply automatically forfeits your registration. </p>
+              <p style="color: #E7C92D; text-align: center;"><span style="font-weight: 800;">IMPORTANT: </span> Deadline for email submission is 5 business days after registration. Failure to comply automatically forfeits your registration. </p>
               <br>
               <hr>
               <p><span style="font-weight: 800;">NOTE:</span> If you will request for an Acknowledgement Receipt, it will be issued during the DevCon Summit event. <br>
@@ -867,9 +1129,7 @@ a{
     
         </div>
     </div>  
-    <div class="w3-hide-large " style="padding: 100px 10px 0px 10px;">
-        <span style="font-family: 'trender', san-serif; font-size: 40px; color: #ED6341; background: #FFFFFF; padding: 10px;"><i class="fas fa-marker"></i>&ensp;Register Now!</span>
-        <br><br>
+    <div class="w3-hide-large " style="padding: 50px 10px 0px 10px;">
         <iframe src="https://eventbrite.com/tickets-external?eid=49832338867&amp;ref=etckt" style="width: 100%; height: 500px;"></iframe>
         <br><br>
         <span style="font-family: 'trender', san-serif; font-size: 20px; color: #FFFFFF; padding: 5px;">Offline Payments</span>
@@ -901,7 +1161,7 @@ a{
             <br>
             <p>7. Once you received a confirmation email from cebu@devcon.ph, your slot is already reserved. </p>
             <br>
-            <p style="color: #861058; text-align: center;"><span style="font-weight: 800;">IMPORTANT: </span> Deadline for email submission is 5 business days after registration. Failure to comply automatically forfeits your registration. </p>
+            <p style="color: #E7C92D; text-align: center;"><span style="font-weight: 800;">IMPORTANT: </span> Deadline for email submission is 5 business days after registration. Failure to comply automatically forfeits your registration. </p>
             <br>
             <hr>
             <p><span style="font-weight: 800;">NOTE:</span> If you will request for an Acknowledgement Receipt, it will be issued during the DevCon Summit event. <br>
@@ -912,31 +1172,20 @@ a{
        
     </div>
   </div>
-  <footer style="position: relative; background: #000000; height: 50px;">
-    <div style="position: absolute; top: 10px; right: 10px; color: #FFFFFF;">
-        <table>
-            <tr>
-              <td style="font-size: 18px;">
-                <!-- Facebook -->
-                  <a class="mx-2" href="https://fb.com/DevConCebu" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-    
-                  <!-- Instagram -->
-                  <a class="mx-2" href="https://www.instagram.com/devconph" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a class="mx-2" href="https://twitter.com/devconph" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-              </td>
-              <td>
-                  Devcon Cebu 2018
-              </td>
-            </tr>
-          </table>
-    </div>
-    </footer>
+  <footer style="position: relative; background: #000000; height: 100px; font-size: 15px; text-align: center; padding-top: 25px;">
+    <!-- Facebook -->
+    <a class="mx-2" href="https://fb.com/DevConCebu" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>&ensp;
+
+    <!-- Instagram -->
+    <a class="mx-2" href="https://www.instagram.com/devconph" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>&ensp;
+    <a class="mx-2" href="https://twitter.com/devconph" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>&ensp;&#xA9;&nbsp;DevCon Cebu 2018
+  </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="assets/template/js/particles.js"></script>
