@@ -43,73 +43,6 @@
       src: url('./assets/fonts/trender.ttf');
     }
 
-    .gradBack {
-      background: linear-gradient(271deg, #880959, #f0623a);
-      background-size: 400% 400%;
-
-      -webkit-animation: AnimationName 24s ease infinite;
-      -moz-animation: AnimationName 24s ease infinite;
-      -o-animation: AnimationName 24s ease infinite;
-      animation: AnimationName 24s ease infinite;
-
-    }
-
-    @-webkit-keyframes AnimationName {
-      0% {
-        background-position: 82% 0%
-      }
-
-      50% {
-        background-position: 19% 100%
-      }
-
-      100% {
-        background-position: 82% 0%
-      }
-    }
-
-    @-moz-keyframes AnimationName {
-      0% {
-        background-position: 82% 0%
-      }
-
-      50% {
-        background-position: 19% 100%
-      }
-
-      100% {
-        background-position: 82% 0%
-      }
-    }
-
-    @-o-keyframes AnimationName {
-      0% {
-        background-position: 82% 0%
-      }
-
-      50% {
-        background-position: 19% 100%
-      }
-
-      100% {
-        background-position: 82% 0%
-      }
-    }
-
-    @keyframes AnimationName {
-      0% {
-        background-position: 82% 0%
-      }
-
-      50% {
-        background-position: 19% 100%
-      }
-
-      100% {
-        background-position: 82% 0%
-      }
-    }
-
     .curve {
       border-radius: 10px;
       overflow: hidden;
@@ -125,6 +58,11 @@
     * {
       font-family: 'Raleway', sans-serif;
       font-weight: 100;
+    }
+
+    .gradBack {
+      background: rgba(0, 0, 0, 0.9) !important;
+      border-bottom: 1px solid rgba(100, 100, 100, 0.9);
     }
 
     .parallax {
@@ -151,8 +89,8 @@
     }
 
     .active {
-      background: #252526 !important;
-      color: #FFFFFF;
+      background-color: rgba(134, 16, 88, 0.5);
+      color: #ED6341 !important;
     }
 
     .bar-btn {
@@ -228,13 +166,14 @@
       display: none;
     }
 
-    #home table{
+    #home table {
       margin: 0 auto;
       min-width: 200px;
       max-width: 700px;
       width: 100%;
     }
-    .w3-bar-item{
+
+    .w3-bar-item {
       font-weight: 800;
     }
   </style>
@@ -242,100 +181,100 @@
 </head>
 
 <body>
-  <div style="position: fixed; top: 0; left: 0; z-index: 5; width: 100vw; overflow: hidden; font-weight: 800; border-bottom: solid 1px #E3EAF0;">
-    <div class="w3-bar w3-black gradBack">
-      <a onclick="goTo('#home', this)" id="_home"class="w3-bar-item bar-btn active">
+  <div style="position: fixed; top: 0; left: 0; z-index: 5; width: 100vw; overflow: hidden; font-weight: 800;">
+    <div id="menu-bar" class="w3-bar w3-black gradBack">
+      <a href='#home' id="_home" class="w3-bar-item bar-btn active">
         <div style="background: url('./assets/template/cebu_white.png') no-repeat; background-position: 0px 5px; background-size: cover; width: 100px; height: 38px;"></div>
-        <a onclick="goTo('#about', this)" id="_about" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">About</a>
-        <a onclick="goTo('#venue', this)" id="_venue" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Venue</a>
-        <a onclick="goTo('#program', this)" id="_agenda" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Agenda</a>
-        <a onclick="goTo('#speakers', this)" id="_speakers" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Speakers</a>
-        <a onclick="goTo('#sponsor', this)" id="_sponsors" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Sponsors</a>
-        <a onclick="goTo('#partner', this)" id="_partners" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Partners</a>
-        <a onclick="goTo('#register', this)" id="_registration" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Registration</a>
+        <a href='#about' id="_about" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">About</a>
+        <a href='#venue' id="_venue" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Venue</a>
+        <a href='#program' id="_program" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Agenda</a>
+        <a href='#speakers' id="_speakers" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Speakers</a>
+        <a href='#sponsor' id="_sponsor" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Sponsors</a>
+        <a href='#partner' id="_partner" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Partners</a>
+        <a href='#register' id="_register" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">Registration</a>
         <a href="javascript:void(0)" class="w3-bar-item w3-padding-16 bar-btn w3-right w3-hide-large " onclick="collapseMenu()">&#9776;</a>
     </div>
-    <div id="mobileBar" class="w3-bar-block w3-black w3-hide w3-hide-large ">
-      <a onclick="goTo('#about', this)" id="_about_small" class="w3-bar-item w3-padding-16 bar-btn">About</a>
-      <a onclick="goTo('#venue', this)" id="_venue_small" class="w3-bar-item w3-padding-16 bar-btn">Venue</a>
-      <a onclick="goTo('#program', this)" id="_agenda_small" class="w3-bar-item w3-padding-16 bar-btn">Agenda</a>
-      <a onclick="goTo('#speakers', this)" id="_speakers_small" class="w3-bar-item w3-padding-16 bar-btn">Speakers</a>
-      <a onclick="goTo('#sponsor', this)" id="_sponsors_small" class="w3-bar-item w3-padding-16 bar-btn">Sponsors</a>
-      <a onclick="goTo('#partner', this)" id="_partners_small" class="w3-bar-item w3-padding-16 bar-btn">Partners</a>
-      <a onclick="goTo('#register', this)" id="_registration_small" class="w3-bar-item w3-padding-16 bar-btn">Registration</a>
+    <div id="mobileBar" class="w3-bar-block w3-black w3-hide w3-hide-large gradBack">
+      <a href='#about' id="_about_small" class="w3-bar-item w3-padding-16 bar-btn">About</a>
+      <a href='#venue' id="_venue_small" class="w3-bar-item w3-padding-16 bar-btn">Venue</a>
+      <a href='#program' id="_program_small" class="w3-bar-item w3-padding-16 bar-btn">Agenda</a>
+      <a href='#speakers' id="_speakers_small" class="w3-bar-item w3-padding-16 bar-btn">Speakers</a>
+      <a href='#sponsor' id="_sponsor_small" class="w3-bar-item w3-padding-16 bar-btn">Sponsors</a>
+      <a href='#partner' id="_partner_small" class="w3-bar-item w3-padding-16 bar-btn">Partners</a>
+      <a href='#register' id="_register_small" class="w3-bar-item w3-padding-16 bar-btn">Registration</a>
     </div>
   </div>
   <!-- <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;" id="pheader"></div> -->
-  <div id="home" class="gradBack">
-      <div class="w3-hide-small w3-hide-medium" style="height: 150px;"></div>
-      <div class="w3-hide-large" style="height: 100px;"></div>
-      <table>
-        <tr>
-          <td style="text-align: center; vertical-align: middle; font-weight: 400; color: #FFFFFF;">
-            <table style="width: 100%; height: 340px;" class="w3-hide-small w3-hide-medium">
-              <tr>
-                <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
-                  <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; max-width: 600px;max-height: 200px; height: 100%;"></div>
-                </td>
-              </tr>
-              <tr>
-                <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
-                  <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; max-width: 400px; height: 90%; max-height: 100px;"></div>
+  <div id="home" class="parallax" style="background-image: url('assets/template/summit.jpg'); min-height: 100vh;">
+    <div class="w3-hide-small w3-hide-medium" style="height: 200px;"></div>
+    <div class="w3-hide-large" style="height: 100px;"></div>
+    <table>
+      <tr>
+        <td style="text-align: center; vertical-align: middle; font-weight: 400; color: #FFFFFF;">
+          <table style="width: 100%; height: 340px;" class="w3-hide-small w3-hide-medium">
+            <tr>
+              <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
+                <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; max-width: 600px;max-height: 200px; height: 100%;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
+                <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; max-width: 400px; height: 90%; max-height: 100px;"></div>
 
+              </td>
+            </tr>
+          </table>
+          <table style="width: 100%;" class="w3-hide-large">
+            <tr>
+              <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
+                <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; height: 200px;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
+                <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; width: 100%; height: 50px;"></div>
+              </td>
+            </tr>
+          </table>
+          <div id="clockdiv" style="font-size: 20px; display:inline-block;">
+            <table style="width: 100%;">
+              <tr>
+                <td style="text-align: center;">
+                  <span class="days"></span>
+                </td>
+                <td style="text-align: center;">
+                  <span class="hours"></span>
+                </td>
+                <td style="text-align: center;">
+                  <span class="minutes"></span>
+                </td>
+                <td style="text-align: center;">
+                  <span class="seconds"></span>
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: center; width: 50px;">
+                  DD
+                </td>
+                <td style="text-align: center; width: 50px;">
+                  HH
+                </td>
+                <td style="text-align: center; width: 50px;">
+                  MM
+                </td>
+                <td style="text-align: center; width: 50px;">
+                  SS
                 </td>
               </tr>
             </table>
-            <table style="width: 100%;" class="w3-hide-large">
-              <tr>
-                <td style="height: 0; vertical-align: bottom; padding: 0px 30px 0px 30px;">
-                  <div style="margin-left: -34px; display: inline-table; background: url('./assets/template/line_white.png') no-repeat bottom; background-size: contain; width: 100%; height: 200px;"></div>
-                </td>
-              </tr>
-              <tr>
-                <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
-                  <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; width: 100%; height: 50px;"></div>
-                </td>
-              </tr>
-            </table>
-            <div id="clockdiv" style="font-size: 20px; display:inline-block;">
-              <table style="width: 100%;">
-                <tr>
-                  <td style="text-align: center;">
-                    <span class="days"></span>
-                  </td>
-                  <td style="text-align: center;">
-                    <span class="hours"></span>
-                  </td>
-                  <td style="text-align: center;">
-                    <span class="minutes"></span>
-                  </td>
-                  <td style="text-align: center;">
-                    <span class="seconds"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="text-align: center; width: 50px;">
-                    DD
-                  </td>
-                  <td style="text-align: center; width: 50px;">
-                    HH
-                  </td>
-                  <td style="text-align: center; width: 50px;">
-                    MM
-                  </td>
-                  <td style="text-align: center; width: 50px;">
-                    SS
-                  </td>
-                </tr>
-              </table>
-              <br><br>
-              <a class="con-btn bar-btn" onclick="register()">Register Now</a>
-            </div>
-          </td>
-        </tr>
-      </table>
-      <div class="w3-hide-small w3-hide-medium" style="height: 150px;"></div>
-      <div class="w3-hide-large" style="height: 100px;"></div>
+            <br><br>
+            <a class="con-btn bar-btn" href="#register">Register Now</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div class="w3-hide-small w3-hide-medium" style="height: 150px;"></div>
+    <div class="w3-hide-large" style="height: 100px;"></div>
   </div>
   <div id="summary" style="background: #252526; color: #FFFFFF; font-weight: 100;">
     <table style="height: 200px; width: 70vw; text-align: center; margin: 0 auto;" class="w3-hide-small w3-hide-medium ">
@@ -607,7 +546,7 @@
                 <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Open Panel 2:
                   Security, IoT, BlockChain, DevOps</span><br>
                 <span style="font-size: 15px; font-weight: 300;">10:15 - 10:30 &ensp;|&ensp; Main Hall &ensp;|&ensp;
-                  Michael Yu, Nisi Marie Jo Tadena, Michael Martinez</span>
+                  Clint Christopher Cañada, Michael Martinez, Nisi Marie Jo Tadena, TBA</span>
               </td>
             </tr>
             <tr>
@@ -781,7 +720,7 @@
                 <span style="font-size: 20px; font-weight: 400; font-style: italic; color: #E7C92D;">Open Panel 2:
                   Security, IoT, BlockChain, DevOps</span><br>
                 <span style="font-size: 15px; font-weight: 300;">10:15 - 10:30 &ensp;|&ensp; Main Hall &ensp;|&ensp;
-                  Michael Yu, Nisi Marie Jo Tadena, Michael Martinez</span>
+                  Clint Christopher Cañada, Michael Martinez, Nisi Marie Jo Tadena, TBA</span>
               </td>
             </tr>
             <tr>
@@ -1132,8 +1071,18 @@
       <div class="overlay">
         <div class="text">Michael Martinez<br>
           <span class="subtitle">
-            <!-- Co-founder<br>
-                          Cebu Innovation Network  -->
+            CEO & President<br>
+            Arielus Software Inc.
+          </span></div>
+      </div>
+    </div>
+    <div class="techgroups curve">
+      <img src="./assets/template/speakers/clintcanada.jpg" alt="Avatar" class="image">
+      <div class="overlay">
+        <div class="text">Clint Christopher Cañada<br>
+          <span class="subtitle">
+            Founder<br>
+            Seguri Asia
           </span></div>
       </div>
     </div>
@@ -1549,7 +1498,72 @@
   </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="assets/template/js/scroll.js"></script>
+<script>
+  $(document).ready(function () {
+    scrollSpy();
+
+    if (window.location.hash !== "") {
+      $(".active").removeClass("active");
+      $('a[href="' + window.location.hash + '"]').addClass("active");
+      console.log(window.location.hash);
+    }
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+          // $(".active").removeClass("active");
+          // event.target.classList.add("active");
+          // console.log(hash)
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          if (hash.indexOf("home") == -1) {
+            window.location.hash = hash;
+          } else {
+            window.location.hash = "";
+          }
+        });
+      } // End if
+    });
+
+    function scrollSpy() {
+      // Cache selectors
+      topMenu = $("#menu-bar");
+      topMenuHeight = topMenu.outerHeight() + 15;
+      menuItems = topMenu.find("a")
+      scrollItems = menuItems.map(function(){
+        item = $($(this).attr("href"));
+          if (item.length) {
+            return item;
+          }
+      });
+
+      $(window).scroll(function(){
+        fromTop = $(this).scrollTop() + topMenuHeight;
+        cur = scrollItems.map(function () {
+          if ($(this).offset().top < fromTop)
+            return this;
+        });
+        cur = cur[cur.length - 1];
+        id = cur && cur.length ? cur[0].id : "";
+
+        $(".active").removeClass("active");
+        $("[href='#" + id + "']").addClass("active");
+      });
+    }
+
+
+  });
+</script>
 <script>
   function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
@@ -1600,23 +1614,6 @@
     } else {
       x.className = x.className.replace(" w3-show", "");
     }
-  }
-
-  function goTo(hrc, el) {
-    var url = hrc.replace("#", "")
-    var elements = document.getElementsByClassName(' active');
-    while (elements.length > 0) {
-      elements[0].classList.remove('active');
-    }
-
-    var x = document.getElementById("mobileBar");
-    x.className = x.className.replace(" w3-show", "");
-    el.className += " active";
-    EPPZScrollTo.scrollVerticalToElementById(url, 10);
-  }
-
-  function register() {
-    EPPZScrollTo.scrollVerticalToElementById("register", 10);
   }
 </script>
 
