@@ -242,37 +242,36 @@
             <tr>
               <td style="height: 0; vertical-align: top; padding: 0px 30px 0px 30px;">
                 <div style="display: inline-table; background: url('./assets/template/white_tagline.png') no-repeat top; background-size: contain; width: 100%; width: 100%; height: 50px;"></div>
+                <br><br>
               </td>
             </tr>
           </table>
           <div id="clockdiv" style="font-size: 20px; display:inline-block;">
             <table style="width: 100%;">
               <tr>
-                <td style="text-align: center;">
-                  <span class="days"></span>
+                <td style="text-align: center; width: 70px; line-height: 20px;">
+                  <span style="font-weight: 800; font-size: 30px;" class="days"></span><br>
+                  <span style="text-align: center; width: 60px; font-size: 12px;">
+                    DAYS
+                  </span>
                 </td>
-                <td style="text-align: center;">
-                  <span class="hours"></span>
+                <td style="text-align: center; width: 70px; line-height: 20px;">
+                  <span style="font-weight: 800; font-size: 30px;" class="hours"></span><br>
+                  <span style="text-align: center; width: 60px; font-size: 12px;">
+                      HOURS
+                  </span>
                 </td>
-                <td style="text-align: center;">
-                  <span class="minutes"></span>
+                <td style="text-align: center; width: 70px; line-height: 20px;">
+                  <span style="font-weight: 800; font-size: 30px;" class="minutes"></span><br>
+                  <span style="text-align: center; width: 60px; font-size: 12px;">
+                      MINUTES
+                  </span>
                 </td>
-                <td style="text-align: center;">
-                  <span class="seconds"></span>
-                </td>
-              </tr>
-              <tr>
-                <td style="text-align: center; width: 50px;">
-                  DD
-                </td>
-                <td style="text-align: center; width: 50px;">
-                  HH
-                </td>
-                <td style="text-align: center; width: 50px;">
-                  MM
-                </td>
-                <td style="text-align: center; width: 50px;">
-                  SS
+                <td style="text-align: center; width: 70px; line-height: 20px;">
+                  <span style="font-weight: 800; font-size: 30px;" class="seconds"></span><br>
+                  <span style="text-align: center; width: 60px; font-size: 12px;">
+                    SECONDS
+                  </span>
                 </td>
               </tr>
             </table>
@@ -1525,17 +1524,10 @@
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
       if (this.hash !== "") {
-        // Prevent default anchor click behavior
         event.preventDefault();
 
         // Store hash
         var hash = this.hash;
-          // $(".active").removeClass("active");
-          // event.target.classList.add("active");
-          // console.log(hash)
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
           scrollTop: $(hash).offset().top
         }, 800, function () {
@@ -1547,6 +1539,7 @@
             window.location.hash = "";
           }
         });
+        collapseMenu();
       } // End if
     });
 
