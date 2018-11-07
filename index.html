@@ -97,6 +97,15 @@
       cursor: pointer;
     }
 
+    .about_pics{
+      width: 100%; height: 500px; background-repeat: no-repeat; background-position: top; background-size: contain;
+    }
+    
+    .about_pics_small
+    {
+      width: 100%; height: 260px; background-repeat: no-repeat; background-position: top; background-size: contain;
+    }
+
     .techgroups {
       position: relative;
       width: 160px;
@@ -182,7 +191,7 @@
 
 <body>
   <div style="position: fixed; top: 0; left: 0; z-index: 5; width: 100vw; overflow: hidden; font-weight: 800;">
-    <div id="menu-bar" class="w3-bar w3-black gradBack">
+    <div id="menu-bar" class="w3-bar w3-black gradBack" >
       <a href='#home' id="_home" class="w3-bar-item bar-btn active">
         <div style="background: url('./assets/template/cebu_white.png') no-repeat; background-position: 0px 5px; background-size: cover; width: 100px; height: 38px;"></div>
         <a href='#about' id="_about" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-16 bar-btn">About</a>
@@ -205,7 +214,7 @@
     </div>
   </div>
   <!-- <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;" id="pheader"></div> -->
-  <div id="home" class="parallax" style="background-image: url('assets/template/summit.jpg'); min-height: 100vh;">
+  <div id="home" class="parallax" style="background-image: url('assets/template/summit.jpg'); background-color: #000000; min-height: 100vh;">
     <div class="w3-hide-small w3-hide-medium" style="height: 200px;"></div>
     <div class="w3-hide-large" style="height: 100px;"></div>
     <table>
@@ -331,7 +340,7 @@
     <div class="w3-hide-small w3-hide-medium">
       <div class="w3-row" style="padding: 150px 200px 0px 200px;">
         <div class="w3-twothird w3-container">
-          <div style="width: 100%; height: 500px; background: url('./assets/template/dev_img.jpg') no-repeat top; background-size: contain;"></div>
+          <div class="lazy about_pics" data-src="./assets/template/dev_img.jpg"></div>
         </div>
         <div class="w3-third w3-container">
           <span style="font-family: 'trender', san-serif; font-size: 45px; line-height: 25px;">Get ready to emerge</span><br>
@@ -359,12 +368,12 @@
           </div>
         </div>
         <div class="w3-twothird w3-container">
-          <div style="width: 100%; height: 500px; background: url('./assets/template/awesome.jpg') no-repeat top; background-size: contain;"></div>
+          <div class="lazy about_pics" data-src="./assets/template/awesome.jpg"></div>
         </div>
       </div>
       <div class="w3-row" style="padding: 150px 200px 0px 200px;">
         <div class="w3-twothird w3-container">
-          <div style="width: 100%; height: 500px; background: url('./assets/template/speakers.jpg') no-repeat top; background-size: contain;"></div>
+          <div class="lazy about_pics" data-src="./assets/template/speakers.jpg"></div>
           <br><br><br>
         </div>
         <div class="w3-third w3-container">
@@ -385,7 +394,7 @@
     <div class="w3-hide-large">
       <div class="w3-row" style="padding: 20px 10px 0px 10px; text-align: center;">
         <div class="w3-twothird w3-container">
-          <div style="width: 100%; height: 260px; background: url('./assets/template/dev_img.jpg') no-repeat top; background-size: contain;"></div>
+          <div class="lazy about_pics_small" data-src="./assets/template/dev_img.jpg"></div>
         </div>
         <div class="w3-third w3-container">
           <br>
@@ -403,7 +412,7 @@
       </div>
       <div class="w3-row" style="padding: 20px 10px 0px 10px; text-align: center;">
         <div class="w3-twothird w3-container">
-          <div style="width: 100%; height: 260px; background: url('./assets/template/awesome.jpg') no-repeat top; background-size: contain;"></div>
+          <div class="lazy about_pics_small" data-src="./assets/template/awesome.jpg"></div>
         </div>
         <div class="w3-third w3-container">
           <br>
@@ -422,7 +431,7 @@
       </div>
       <div class="w3-row" style="padding: 20px 10px 0px 10px; text-align: center;">
         <div class="w3-twothird w3-container">
-          <div style="width: 100%; height: 260px; background: url('./assets/template/speakers.jpg') no-repeat top; background-size: contain;"></div>
+          <div class="lazy about_pics_small" data-src="./assets/template/speakers.jpg"></div>
         </div>
         <div class="w3-third w3-container">
           <br>
@@ -440,7 +449,7 @@
         </div>
       </div>
     </div>
-    <div id="venue" class="parallax" style="background-image: url('assets/template/mrhall.jpg'); position: relative; height: 100vh; text-align: center;">
+    <div id="venue" class="parallax lazy" data-src="assets/template/mrhall.jpg" style="background-color: #000000; position: relative; height: 100vh; text-align: center;">
       <div class="w3-row w3-hide-small w3-hide-medium" style="padding: 150px 200px 0px 200px;">
         <div class="w3-twothird w3-container">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.85721939614!2d123.90775791528719!3d10.353299569690735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a998eacee0c2c7%3A0x9b4bd9f5b718ad7d!2sMichael+Richartz+Building%2C+Nasipit%2C+Lungsod+ng+Cebu%2C+Lalawigan+ng+Cebu!5e0!3m2!1sen!2sph!4v1537443060366"
@@ -859,7 +868,7 @@
       <table style="width: 100%;">
         <td>
           <div class="techgroups curve">
-            <img src="./assets/template/speakers/Maderazo.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/speakers/Maderazo.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Engr. Christian Maderazo<br>
                 <span class="subtitle">
@@ -870,7 +879,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/speakers/alistair.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/speakers/alistair.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Alistair Israel<br>
                 <span class="subtitle">
@@ -881,7 +890,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/speakers/arbon.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/speakers/arbon.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Nanette Arbon<br>
                 <span class="subtitle">
@@ -892,7 +901,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/speakers/david.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/speakers/david.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Dave Overton<br>
                 <span class="subtitle">
@@ -903,7 +912,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/speakers/rapes.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/speakers/rapes.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Jerry Rapes<br>
                 <span class="subtitle">
@@ -913,7 +922,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/speakers/michael.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/speakers/michael.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Michael Yu<br>
                 <span class="subtitle">
@@ -925,7 +934,7 @@
           </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/alturas.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/alturas.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Francis Alturas<br>
           <span class="subtitle">
@@ -936,7 +945,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/clint.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/clint.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Clint Hennesy Cagang<br>
           <span class="subtitle">
@@ -946,7 +955,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/ruffy.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/ruffy.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Ruffy Heredia<br>
           <span class="subtitle">
@@ -957,7 +966,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/zenia.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/zenia.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Zenia Mai Go<br>
           <span class="subtitle">
@@ -968,7 +977,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/dexter.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/dexter.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Dexter John Genterone<br>
           <span class="subtitle">
@@ -978,7 +987,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/petr.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/petr.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Petr Sebesta<br>
           <span class="subtitle">
@@ -988,7 +997,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/nisi.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/nisi.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Nisi Marie Jo Tadena<br>
           <span class="subtitle">
@@ -998,7 +1007,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/jose.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/jose.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Jose Ildefonso Labayen<br>
           <span class="subtitle">
@@ -1009,7 +1018,7 @@
     </div>
 
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/mark.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/mark.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Mark Win Panerio<br>
           <span class="subtitle">Front End Engineer<br>
@@ -1018,7 +1027,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/patrick.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/patrick.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Patrick John Pacaña<br>
           <span class="subtitle">Front End Engineer<br>
@@ -1026,7 +1035,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/albert.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/albert.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Albert Padin<br>
           <span class="subtitle">
@@ -1036,7 +1045,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/joseph.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/joseph.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Joseph Rivera
           <span class="subtitle">
@@ -1047,7 +1056,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/ren.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/ren.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Renee Louise Campanilla<br>
           <span class="subtitle">
@@ -1057,7 +1066,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/mikee.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/mikee.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Mikee Morado<br>
           <span class="subtitle">
@@ -1067,7 +1076,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/mike.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/mike.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Michael Martinez<br>
           <span class="subtitle">
@@ -1077,7 +1086,7 @@
       </div>
     </div>
     <div class="techgroups curve">
-      <img src="./assets/template/speakers/clintcanada.jpg" alt="Avatar" class="image">
+      <img data-src="./assets/template/speakers/clintcanada.jpg" alt="Avatar" class="image lazy">
       <div class="overlay">
         <div class="text">Clint Christopher Cañada<br>
           <span class="subtitle">
@@ -1092,7 +1101,7 @@
     <br><br>
 
   </div>
-  <div id="sponsor" class="parallax" style="background-image: url('assets/template/color.jpg'); text-align: center;">
+  <div id="sponsor" class="parallax lazy" data-src="assets/template/color.jpg" style="background-color: #000000; text-align: center;">
     <div class="w3-hide-small w3-hide-medium" style="padding-top: 100px;">
       <span style="font-family: 'trender', san-serif; font-size: 45px; color: #FFFFFF; padding: 5px;">&ensp;Sponsors&ensp;</span>
       <div style="width: 100px; height: 10px; background: #72B222; margin: 0 auto;"></div>
@@ -1113,7 +1122,7 @@
           <br><br>
           <span style="font-size: 30px; font-weight: 800; color: #72B222;">Co Presenter</span><br><br>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/homecredit.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/homecredit.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.homecredit.ph/about-us/">Home Credit Finance Philippines Inc.</a>
@@ -1121,7 +1130,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/rhipe.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/rhipe.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.rhipe.com/">Rhipe<br>The Cloud Channel Company</a>
@@ -1135,7 +1144,7 @@
           <br>
           <span style="font-size: 30px; font-weight: 800; color: #C8CBCC;">Silver</span><br><br>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/trustarc.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/trustarc.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.trustarc.com/">TrustArc</a>
@@ -1149,7 +1158,7 @@
           <br>
           <span style="font-size: 30px; font-weight: 800; color: #ED6341;">Bronze</span><br><br>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/arcanys.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/arcanys.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.arcanys.com/about/our-story">Arcanys</a>
@@ -1157,7 +1166,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/cloudstaff.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/cloudstaff.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.cloudstaff.com/about-cloudstaff/">Cloudstaff</a>
@@ -1165,7 +1174,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/yondu.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/yondu.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.yondu.com">Yondu</a>
@@ -1173,7 +1182,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/legalmatch.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/legalmatch.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.legalmatch.com/">LegalMatch</a>
@@ -1188,7 +1197,7 @@
           <br>
           <span style="font-size: 30px; font-weight: 800; color: #4DAED4;">Exhibitor</span><br><br>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/gsic.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/gsic.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="http://goldensummitph.com">Golden Summit Immigration Consultancy</a>
@@ -1203,7 +1212,7 @@
           <br>
           <span style="font-size: 30px; font-weight: 800; color: #E7C92D;">Pre-event Sponsors</span><br><br>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/amihan.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/amihan.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://amihan.net/">Amihan Global Strategies</a>
@@ -1211,7 +1220,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/thecompany.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/thecompany.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="http://thecompany.jp">The Company Cebu</a>
@@ -1219,7 +1228,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/inspire.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/inspire.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.inspireteam.com">Inspire Team <br> Ltd.</a>
@@ -1227,7 +1236,7 @@
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/tweeklabs.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/tweeklabs.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="http://www.tweeklabs.com">TweekLabs</a>
@@ -1241,7 +1250,7 @@
           <br>
           <span style="font-size: 30px; font-weight: 800; color: #fa6aff;">Media Partners</span><br><br>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/1216.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/1216.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="http://1216media.com">1216 Media</a>
@@ -1255,7 +1264,7 @@
           <br>
           <span style="font-size: 30px; font-weight: 800; color: #fa6aff;">Contributing Partners</span><br><br>
           <div class="techgroups curve">
-            <img src="./assets/template/sponsors/microsoft.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/sponsors/microsoft.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">
                 <a href="https://www.microsoft.com/en-ph">Microsoft</a>
@@ -1292,59 +1301,59 @@
       <tr>
         <td>
           <div class="techgroups curve">
-            <img src="./assets/template/groups/cebugamedev.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/cebugamedev.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Cebu Game Dev</div>
             </div>
           </div>
 
           <div class="techgroups curve">
-            <img src="./assets/template/groups/cebuwordpress.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/cebuwordpress.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Cebu Wordpress Meetup</div>
             </div>
           </div>
 
           <div class="techgroups curve">
-            <img src="./assets/template/groups/symfonycebu.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/symfonycebu.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Symfony Cebu</div>
             </div>
           </div>
 
           <div class="techgroups curve">
-            <img src="./assets/template/groups/gdg.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/gdg.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Google Developers Group Cebu</div>
             </div>
           </div>
 
           <div class="techgroups curve">
-            <img src="./assets/template/groups/vuejs.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/vuejs.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Vue.js Cebu</div>
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/groups/laravel.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/laravel.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Laravel Cebu</div>
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/groups/pizzapy.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/pizzapy.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">PizzaPy</div>
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/groups/iot.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/iot.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">IOT Cebu</div>
             </div>
           </div>
           <div class="techgroups curve">
-            <img src="./assets/template/groups/cin.jpg" alt="Avatar" class="image">
+            <img data-src="./assets/template/groups/cin.jpg" alt="Avatar" class="image lazy">
             <div class="overlay">
               <div class="text">Cebu Innovation Network</div>
             </div>
@@ -1498,9 +1507,15 @@
   </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
 <script>
   $(document).ready(function () {
     scrollSpy();
+    $('.lazy').Lazy({scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        effectTime: 1000,
+        visibleOnly: true,
+        defaultImage: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAMKGlDQ1BJQ0MgUHJvZmlsZQAASImVlwdYU8kWgOeWJCQktEAEpITeBOlVeo0gIB1shCSQUGJICCp2ZFHBtaAighVdFVFxLYAsKmJXFsHeHxZUlHWxYEPlTRJAV7/33vfm++bOf8+cOXPOuXPnmwFANZotEmWjagDkCPPEMaEBzKTkFCbpIcDBaACAC3BmcyQi/+joCPgGhtt/lnfXASJrr9jKbP3c/1+LOpcn4QCARENO40o4OZAPAYC7ckTiPAAIvVBuMiNPBJkIvQSaYuggZFMZZyjYXcZpCo6Q68TFBEJOBUCJymaLMwBQkfnFzOdkQDsqyyDbC7kCIeRmyD4cPpsL+TPkMTk50yGrWkK2TPvOTsY/bKaN2GSzM0ZYEYu8KAUJJKJs9qz/Mx3/u+RkS4fnMIGVyheHxchiluUta3q4jKmQzwnTIqMga0C+KuDK9WX8hC8Nix/S/8CRBMKcAQYAKJXLDgqHrAfZWJgdGTEk90kXhLAgw9yjcYI8VpxiLMoVT48Zso/O5EmCY4eZLZbPJdMpkWbF+w/Z3MTnsYZtNhXw4xIVfqId+YKESMgqkO9KsmLDh3SeF/ADI4d1xNIYmc/wm2MgXRwSo9DBTHMkw3FhnnwBK3KII/L4cWGKsdhUDlvumzbkTJ4kKWLYTy4vKFgRF1bIE8YP+Y+VifICYob0t4uyo4f0sWZedqhMbgy5XZIfOzy2Lw8uNkW8OBDlRccpfMM1M9njoxU+4NYgAgSCIMAEUljTwHSQCQTtvQ298E3REwLYQAwyAA/YDkmGRyTKe4TwGQsKwF+QeEAyMi5A3ssD+VD+ZUSqeNqCdHlvvnxEFngCOQeEg2z4LpWPEo7MlgAeQ4ngp9k50NdsWGV9P8mYqsMyYjAxiBhGDCFa4bq4D+6FR8CnH6yOuDvuMezXN33CE0In4SHhGqGLcGuaoFD8g+dMMAF0QR9DhqJL+z463BxadcEDcG9oH9rGGbgusMWd4Uz+uC+c2wVKv/dVOhLxt1wO2SLbk1HyKLIf2fJHD1SsVVxGrMgy9X0uFH6ljWQrcKTnxzgCv8sfF7bhP2piS7CD2FnsBHYea8YaABM7jjVibdhRGY+sjcfytTE8W4zcnyxoR/DTfOyhOWVZk9jX2vfYfx7qA3m8mXmynyVwumiWWJDBz2P6w92ax2QJOXZjmI72DnAXle39iq3lDUO+pyOMC99kuS0AeJRAYcY3GRvuQUeeAEB/901m8hou+5UAHO3gSMX5ChkuexAABajCP0UHGMC9yxJG5AhcgRfwA8FgPIgCcSAZTIV55sN1KgYzwBywEBSDUrASrAWVYDPYBnaBveAAaADN4AQ4Ay6CDnAN3IFrpRu8AH3gHRhAEISE0BA6ooMYImaIDeKIuCM+SDASgcQgyUgqkoEIESkyB1mElCJlSCWyFalBfkeOICeQ80gncgt5gPQgr5FPKIZSUU1UHzVHx6LuqD8ajsahU9AMNBctQIvQ5WgFWo3uQevRE+hF9Brahb5A+zGAKWMMzAizxdyxQCwKS8HSMTE2DyvByrFqbB/WBL/0FawL68U+4kScjjNxW7hew/B4nIPn4vPwZXglvguvx0/hV/AHeB/+lUAj6BFsCJ4EFiGJkEGYQSgmlBN2EA4TTsN/p5vwjkgkMogWRDf47yUTM4mzicuIG4l1xBZiJ/ERsZ9EIumQbEjepCgSm5RHKiatJ+0hHSddJnWTPigpKxkqOSqFKKUoCZUKlcqVdisdU7qs9FRpgKxGNiN7kqPIXPIs8grydnIT+RK5mzxAUadYULwpcZRMykJKBWUf5TTlLuWNsrKysbKH8kRlgfIC5Qrl/crnlB8of6RqUK2pgdTJVCl1OXUntYV6i/qGRqOZ0/xoKbQ82nJaDe0k7T7tgwpdxU6FpcJVma9SpVKvclnlpSpZ1UzVX3WqaoFquepB1UuqvWpkNXO1QDW22jy1KrUjajfU+tXp6g7qUeo56svUd6ufV3+mQdIw1wjW4GoUaWzTOKnxiI7RTeiBdA59EX07/TS9W5OoaaHJ0szULNXcq9mu2aeloeWslaA1U6tK66hWFwNjmDNYjGzGCsYBxnXGp1H6o/xH8UYtHbVv1OVR77VHa/tp87RLtOu0r2l/0mHqBOtk6azSadC5p4vrWutO1J2hu0n3tG7vaM3RXqM5o0tGHxh9Ww/Vs9aL0Zutt02vTa9f30A/VF+kv17/pH6vAcPAzyDTYI3BMYMeQ7qhj6HAcI3hccPnTC2mPzObWcE8xewz0jMKM5IabTVqNxowtjCONy40rjO+Z0IxcTdJN1lj0mrSZ2poOsF0jmmt6W0zspm7Gd9sndlZs/fmFuaJ5ovNG8yfWWhbsCwKLGot7lrSLH0tcy2rLa9aEa3crbKsNlp1WKPWLtZ86yrrSzaojauNwGajTecYwhiPMcIx1WNu2FJt/W3zbWttH9gx7CLsCu0a7F6ONR2bMnbV2LNjv9q72Gfbb7e/46DhMN6h0KHJ4bWjtSPHscrxqhPNKcRpvlOj0ytnG2ee8ybnmy50lwkui11aXb64urmKXfe59riZuqW6bXC74a7pHu2+zP2cB8EjwGO+R7PHR09XzzzPA55/e9l6ZXnt9no2zmIcb9z2cY+8jb3Z3lu9u3yYPqk+W3y6fI182b7Vvg/9TPy4fjv8nvpb+Wf67/F/GWAfIA44HPA+0DNwbmBLEBYUGlQS1B6sERwfXBl8P8Q4JCOkNqQv1CV0dmhLGCEsPGxV2A2WPovDqmH1jXcbP3f8qXBqeGx4ZfjDCOsIcUTTBHTC+AmrJ9yNNIsURjZEgShW1Oqoe9EW0bnRf0wkToyeWDXxSYxDzJyYs7H02Gmxu2PfxQXErYi7E28ZL41vTVBNmJxQk/A+MSixLLEraWzS3KSLybrJguTGFFJKQsqOlP5JwZPWTuqe7DK5ePL1KRZTZk45P1V3avbUo9NUp7GnHUwlpCam7k79zI5iV7P701hpG9L6OIGcdZwXXD/uGm4Pz5tXxnua7p1elv4swztjdUYP35dfzu8VBAoqBa8ywzI3Z77PisramTWYnZhdl6OUk5pzRKghzBKemm4wfeb0TpGNqFjUleuZuza3Txwu3iFBJFMkjXma8JDdJrWU/iJ9kO+TX5X/YUbCjIMz1WcKZ7bNsp61dNbTgpCC32bjszmzW+cYzVk458Fc/7lb5yHz0ua1zjeZXzS/e0Hogl0LKQuzFv5ZaF9YVvh2UeKipiL9ogVFj34J/aW2WKVYXHxjsdfizUvwJYIl7Uudlq5f+rWEW3Kh1L60vPTzMs6yC786/Frx6+Dy9OXtK1xXbFpJXClceX2V76pdZeplBWWPVk9YXb+GuaZkzdu109aeL3cu37yOsk66rqsioqJxven6les/V/Irr1UFVNVt0NuwdMP7jdyNlzf5bdq3WX9z6eZPWwRbbm4N3VpfbV5dvo24LX/bk+0J28/+5v5bzQ7dHaU7vuwU7uzaFbPrVI1bTc1uvd0ratFaaW3Pnsl7OvYG7W3cZ7tvax2jrnQ/2C/d//z31N+vHwg/0HrQ/eC+Q2aHNhymHy6pR+pn1fc18Bu6GpMbO4+MP9La5NV0+A+7P3Y2GzVXHdU6uuIY5VjRscHjBcf7W0QtvScyTjxqndZ652TSyaunJp5qPx1++tyZkDMnz/qfPX7O+1zzec/zRy64X2i46Hqxvs2l7fCfLn8ebndtr7/kdqmxw6OjqXNc57HLvpdPXAm6cuYq6+rFa5HXOq/HX795Y/KNrpvcm89uZd96dTv/9sCdBXcJd0vuqd0rv693v/pfVv+q63LtOvog6EHbw9iHdx5xHr14LHn8ubvoCe1J+VPDpzXPHJ8194T0dDyf9Lz7hejFQG/xX+p/bXhp+fLQ335/t/Ul9XW/Er8afL3sjc6bnW+d37b2R/fff5fzbuB9yQedD7s+un88+ynx09OBGZ9Jnyu+WH1p+hr+9e5gzuCgiC1my48CGKxoejoAr3cCQEuGZ4cOACiTFHczeUEU90k5gf/EivubvLgCsNMPgPgFAETAM8omWM0gU2ErO4LH+QHUyWmkDhVJupOjwhYV3lgIHwYH3+gDQGoC4It4cHBg4+Dgl+3Q2VsAtOQq7oSyIruDbrGSUXsbBfxY/g0TOnBkOB42kgAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAZtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MjA8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+MjI8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KLksyMQAAABxpRE9UAAAAAgAAAAAAAAALAAAAKAAAAAsAAAALAAAAVBcEmS4AAAAgSURBVDgRYlTXUPrPQEXAOGogxaE5GoYUByHD4A9DAAAAAP//EYwgtwAAAB1JREFUY1TXUPrPQEXAOGogxaE5GoYUByHD4A9DAAXKH7dSR/lLAAAAAElFTkSuQmCC'});
 
     if (window.location.hash !== "") {
       $(".active").removeClass("active");
